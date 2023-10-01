@@ -84,3 +84,74 @@
 .map-circle-placemark {
 	background: red;
 }
+@media screen and (max-width: 1370px){
+	.cont__left {
+		width: 400px;
+		margin-left: -480px;
+	}
+
+	.cont__text {
+		max-width: 316px;
+	}
+}
+@media screen and (max-width: 991px){
+	.cont {
+		height: auto;
+	}
+	.cont__wrapper {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 30px;
+	}
+
+	.cont__left {
+		padding-top: 30px;
+		position: static;
+		max-width: 720px;
+		margin: 0 auto;
+		box-shadow: none;
+		width: 100%;
+	}
+	.cont__right {
+		width: 100%;
+		height: 400px;
+	}
+	.cont__map {
+		position: static;
+	}
+	.cont__text {
+		margin-bottom: 60px;
+	}
+	.cont__info {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+@media screen and (max-width: 767px){
+	.cont__wrapper {
+		gap: 20px;
+	}
+	.cont__left {
+		max-width: 500px;
+		padding: 30px 0 0;
+	}
+	.cont__text {
+		margin-bottom: 40px;
+	}
+	.cont__info {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 574px){
+	.cont__title {
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.cont__left {
+		padding-left: 15px;
+	}
+	.cont__right {
+		height: 350px;
+	}
+}
