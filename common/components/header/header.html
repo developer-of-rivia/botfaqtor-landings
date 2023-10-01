@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><!--#echo var="title" --></title>
+    <meta name="description" content="С помощью машинного обучения блокируем ботов и скрываем показ релкамы на сайте.">
+    <link rel="icon" type="image/x-icon" href="https://botfaqtor.ru/favicon.ico">
+    <meta property="og:url" content="https://botfaqtor.ru/captcha/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Комплексная система кибербезопасности Ботфактор. Защита от ботов и скликивания с помощью Умной капчи" />
+    <meta property="og:description" content="Защита рекламных кампаний от фродовых конверсий с использованием умной капчи." />
+    <meta property="og:image" content="ogg-preview.jpg" />
+	<!-- <link rel="stylesheet" href="css/libs.min.css"> -->
+	<link rel="stylesheet" href="css/app.min.css">
+	<!-- Внешние скрипты -->
+	<link rel="stylesheet" href="libs/roll-network/roll-network.css">
+	<!-- jQuery -->
+	<script src="libs/jquery-3.6.4.min.js"></script>
+
+	
+	<!-- Внешнийе скрипты -->
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160917634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160917634-1', {
+            'custom_map': {
+                'dimension1': 'Botfaqtor'
+            }
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://botfaqtor.ru",
+            "logo": "https://botfaqtor.ru/assets/remaster/images/landing/brand.svg"
+        }
+    </script>
+	<!-- Begin Verbox {literal} -->
+    <script type='text/javascript'>
+        (function (d, w, m) {
+            window.supportAPIMethod = m;
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.id = 'supportScript';
+            s.charset = 'utf-8';
+            s.async = true;
+            var id = 'fa8d6ba2fa033b89a545e3d9db332dae';
+            s.src = 'https://admin.verbox.ru/support/support.js?h=' + id;
+            var sc = d.getElementsByTagName('script')[0];
+            w[m] = w[m] || function () {
+                (w[m].q = w[m].q || []).push(arguments);
+            };
+            if (sc) sc.parentNode.insertBefore(s, sc);
+            else d.documentElement.firstChild.appendChild(s);
+        })(document, window, 'Verbox');
+    </script>
+    <!-- {/literal} End Verbox -->
+
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?169',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1797839-fOkih"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1797839-fOkih" style="position:fixed; left:-999px;" alt=""/></noscript>
+
+<!-- calltouch -->
+<script>
+(function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","6xjqkkgg");
+</script>
+<!-- calltouch -->
+</head>
+
+<body>
+	<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(86566686, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script> <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86566686" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
+	<!-- header -->
+	<header class="header">
+		<div class="header__container">
+			<a href="/" class="header__logo">
+				<img src="images/dist/logo.svg">
+			</a>
+			<div class="header__panel">
+				<nav class="header__menu">
+					<ul class="nav">
+						<li class="nav__item nav__dropdown">
+							<a class="nav__link">
+								<span class="nav__link-text--desktop">Все сервисы защиты от ботов</span>
+								<span class="nav__link-text--tablet">Сервисы</span>
+								<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.2713 0.793894C0.0904331 0.989823 0 1.23919 0 1.54199C0 1.84478 0.0904331 2.09415 0.2713 2.29008L4.80942 7.20611C4.90807 7.31298 5.01495 7.3885 5.13004 7.43267C5.24514 7.47685 5.36846 7.49929 5.5 7.5C5.63154 7.5 5.75913 7.47328 5.88278 7.41985C6.00643 7.36641 6.10903 7.29517 6.19058 7.20611L10.7287 2.29008C10.9096 2.09415 11 1.84478 11 1.54199C11 1.23919 10.9096 0.989823 10.7287 0.793894C10.5478 0.597965 10.3176 0.5 10.0381 0.5C9.75859 0.5 9.5284 0.597965 9.34753 0.793894L5.5 4.96183L1.65247 0.793894C1.4716 0.597965 1.2414 0.5 0.961883 0.5C0.682362 0.5 0.452167 0.597965 0.2713 0.793894Z" fill="#111111"/>
+								</svg>
+							</a>
+							<ul class="nav__dropdown-box">
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru/yandex-clickfraud/" class="nav__dropdown-link">
+										<img src="images/dist/nav-yandex-protect.svg">
+										<span class="nav__dropdown-link-text">Защита от скликивания Яндекс Директ</span>
+									</a>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru/google-clickfraud/" class="nav__dropdown-link">
+										<img src="images/dist/nav-google-protect.svg">
+										<span class="nav__dropdown-link-text">Защита от скликивания Google Ads</span>
+									</a>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru/sites-antibot/" class="nav__dropdown-link">
+										<img src="images/dist/nav-site-protect.svg">
+										<span class="nav__dropdown-link-text">Антибот для сайта</span>
+									</a>
+								</li>
+								<li class="nav__dropdown-item">
+									<a href="https://botfaqtor.ru/captcha/" class="nav__dropdown-link">
+										<img src="images/dist/nav-site-captcha.svg">
+										<span class="nav__dropdown-link-text">Умная капча</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/blog/" class="nav__link">
+								<span>Блог</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/blog/cases/" class="nav__link">
+								<span>Кейсы</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="https://botfaqtor.ru/affiliate-program/" class="nav__link">
+								<span>Партнерская программа</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__info">
+					<a href="mailto:info@botfaqtor.ru" class="header__info-mail">
+						info@botfaqtor.ru
+					</a>
+					<a href="tel:74959466031" class="header__info-phone">
+						+7 (495) 946-6031
+					</a>
+				</div>
+				<div class="header__right">
+					<div class="header__right-cell">
+						<a href="https://botfaqtor.ru/signin" data-button="struct2 colors2 size5" class="header__account">
+							Личный кабинет
+						</a>
+					</div>
+					<div class="header__right-cell">
+						<a href="https://botfaqtor.ru/register" class="header__connect">
+							Подключить
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__toggle">
+				<div class="header__toggle-burger">
+					<svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M31 11.5C31 11.1022 30.842 10.7206 30.5607 10.4393C30.2794 10.158 29.8978 10 29.5 10H1.5C1.10218 10 0.720644 10.158 0.43934 10.4393C0.158035 10.7206 0 11.1022 0 11.5C0 11.8978 0.158035 12.2794 0.43934 12.5607C0.720644 12.842 1.10218 13 1.5 13H29.5C29.8978 13 30.2794 12.842 30.5607 12.5607C30.842 12.2794 31 11.8978 31 11.5ZM31 1.5C31 1.10218 30.842 0.720644 30.5607 0.43934C30.2794 0.158035 29.8978 0 29.5 0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5C0 1.89782 0.158035 2.27936 0.43934 2.56066C0.720644 2.84196 1.10218 3 1.5 3H29.5C29.8978 3 30.2794 2.84196 30.5607 2.56066C30.842 2.27936 31 1.89782 31 1.5ZM31 21.5C31 21.1022 30.842 20.7206 30.5607 20.4393C30.2794 20.158 29.8978 20 29.5 20H1.5C1.10218 20 0.720644 20.158 0.43934 20.4393C0.158035 20.7206 0 21.1022 0 21.5C0 21.8978 0.158035 22.2794 0.43934 22.5607C0.720644 22.842 1.10218 23 1.5 23H29.5C29.8978 23 30.2794 22.842 30.5607 22.5607C30.842 22.2794 31 21.8978 31 21.5Z" fill="black"/>
+					</svg>
+				</div>
+				<div class="header__toggle-close hidden">
+					<svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M25.5 26L1.5 2M25.5 2L1.5 26" stroke="black" stroke-width="3" stroke-linecap="round"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
