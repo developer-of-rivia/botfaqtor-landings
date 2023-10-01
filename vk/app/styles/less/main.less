@@ -701,15 +701,6 @@
 }
 
 @media (max-width:1370px) {
-	.header__container {
-		padding: 0 20px;
-		gap: 25px;
-	}
-
-	.header__info {
-		display: none;
-	}
-
 	.main {
 		padding-bottom: 160px;
 		padding-top: 60px;
@@ -837,10 +828,6 @@
 		display: inline-block;
 	}
 
-	.qa {
-		padding-bottom: 100px;
-	}
-
 	.main__content{
 		padding-top: 0;
 		max-width: 100%;
@@ -871,107 +858,6 @@
 	.subtitle {
 		font-size: 21px;
 		line-height: 31px;
-	}
-
-	.header__container {
-
-
-		justify-content: space-between;
-	}
-
-	.header__panel {
-		padding-bottom: 100px;
-	}
-
-	.header__info {
-
-
-		display: flex;
-		-webkit-box-align: end;
-		-ms-flex-align: end;
-		align-items: flex-end;
-		position: fixed;
-		right: 90px;
-		top: 20px;
-	}
-
-	.header__info-phone {
-		background: -webkit-gradient(linear,left top,right top,from(#27c58b),to(#029e81));
-		background: -o-linear-gradient(left,#27c58b,#029e81);
-		background: linear-gradient(to right,#27c58b,#029e81);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
-	.header__right {
-
-
-
-		flex-direction: column;
-		width: 100%;
-		gap: 0;
-	}
-
-	.header__menu {
-		-webkit-box-ordinal-group: 3;
-		-ms-flex-order: 2;
-		order: 2;
-		width: 100%;
-	}
-
-	.header__right-cell {
-		width: 100%;
-		padding: 22px 20px;
-		border-bottom: 1px solid rgba(0,0,0,.1);
-	}
-
-	.header__right-cell:first-child {
-		-webkit-box-ordinal-group: 3;
-		-ms-flex-order: 2;
-		order: 2;
-	}
-
-	.header__toggle {
-		display: block;
-	}
-
-	.header__toggle svg {
-		width: 40px;
-		height: 31px;
-	}
-
-	.header__panel {
-		opacity: 1;
-		-webkit-transition: opacity .2s;
-		-o-transition: opacity .2s;
-		transition: opacity .2s;
-		position: fixed;
-		top: 81px;
-		right: -100vw;
-		width: 100vw;
-		height: calc(100vh - 81px);
-		background: #fff;
-		overflow-y: auto;
-
-
-
-		flex-direction: column;
-		-webkit-box-flex: auto;
-		-ms-flex-positive: auto;
-		flex-grow: auto;
-		-webkit-box-pack: start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		z-index: 5;
-	}
-
-	.header__panel--open {
-		right: 0;
-		opacity: 1;
-	}
-
-	a.header__account:before {
-		display: none;
 	}
 
 	.nav {
@@ -1106,10 +992,6 @@
 	.calc__wrapper {
 		width: 100%;
 		gap: 30px;
-	}
-
-	.qa {
-		padding-bottom: 80px;
 	}
 
 	.get {
@@ -1399,14 +1281,6 @@
 	.subtitle {
 		font-size: 16px;
 		line-height: 130%;
-	}
-
-	.header__container {
-		padding: 0 10px;
-	}
-
-	.header__info {
-		right: 70px;
 	}
 
 	.main {
@@ -1756,23 +1630,3 @@ summary {
 .table-tariff.col-table-3.table2p.active + .table-tariff.col-table-3.table2p.active{
     border-left: none;
 }
-
-
-
-
-
-/* buttons */
-@media screen and (max-width: 991px){
-	[data-button~=size1]{
-		font-size: 14px;
-		padding: 7px 15px;
-	}
-	.header__connect{
-		padding: 0;
-	}
-}
-
-
-
-
-
