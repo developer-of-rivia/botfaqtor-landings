@@ -1,220 +1,44 @@
-/* Inter */
-@font-face {
-	font-family: Inter;
-	font-style: normal;
-	src: url(../fonts/Inter/Inter-Regular.woff2);
-	font-weight: 400;
+/* VK Реклама settings */
+:root{
+	--landing-color: #0085FF;
 }
-@font-face {
-	font-family:Inter;
-	font-style:normal;
-	src:url(../fonts/Inter/Inter-Medium.woff2);
-	font-weight:500;
-}
-@font-face {
-	font-family:Inter;
-	font-style:normal;
-	src:url(../fonts/Inter/Inter-SemiBold.woff2);
-	font-weight:600;
-}
-@font-face {
-	font-family:Inter;
-	font-style:normal;
-	src:url(../fonts/Inter/Inter-Bold.woff2);
-	font-weight:700;
-}
-@font-face {
-	font-family:Inter;
-	font-style:normal;
-	src:url(../fonts/Inter/Inter-Extrabold.woff2);
-	font-weight:800;
-}
-@font-face {
-	font-family:Inter;
-	font-style:normal;
-	src:url(../fonts/Inter/Inter-Black.woff2);
-	font-weight:900;
-}
-/* Rubik */
-@font-face {
-	font-family:Rubik;
-	font-style:normal;
-	src:url(../fonts/Rubik/Rubik-Regular.woff2);
-	font-weight:400;
-}
-@font-face {
-	font-family:Rubik;
-	font-style:normal;
-	src:url(../fonts/Rubik/Rubik-Medium.woff2);
-	font-weight:500;
-}
-@font-face {
-	font-family:Rubik;
-	font-style:normal;
-	src:url(../fonts/Rubik/Rubik-Bold.woff2);
-	font-weight:700;
-}
-@font-face {
-	font-family:Rubik;
-	font-style:normal;
-	src:url(../fonts/Rubik/Rubik-Black.woff2);
-	font-weight:900;
-}
-@font-face {
-	font-family:Rubik;
-	src:url(../fonts/Rubik/Rubik-SemiBold.woff2);
-	font-weight:600;
-}
-@font-face {
-	font-family:Rubik;
-	src:url(../fonts/Rubik/Rubik-ExtraBold.woff2);
-	font-weight:800;
-}
-/* reset */
-html {
-	scroll-behavior: smooth;
-}
-body, html {
-	overflow: hidden visible;
-}
-*,:after,:before {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-img {
-	max-width: 100%;
-}
-li {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-}
-button,input,textarea {
-	outline: 0;
-}
-button {
-	border: none;
-}
-ul li:last-child {
-	margin-right: 0;
-	margin-bottom: 0;
-}
-ul li:first-child {
-	margin-left: 0;
-	margin-top: 0;
-}
-.text p:last-child {
-	margin-bottom: 0;
-}
-a,button {
-	cursor: pointer;
-	display: inline-block;
-}
-h1,h2,h3,h4,h5,h6 {
-	margin: 0;
-}
-svg {
-	width: 15px;
-	height: 15px;
-}
-section {
-	overflow: hidden;
-}
-span {
-	font-weight: inherit;
-	font-family: inherit;
-}
-/**/
-.container {
-	max-width: 1320px;
-	margin: 0 auto;
-}
-.container2 {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-* {
-	font-family: Rubik;
-	font-weight: 400;
-}
-.body-stop {
-	overflow: hidden!important;
-}
-.hidden {
-	display: none;
-}
-/* button */
-.btn{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	background: #0085FF;
-	border-radius: 60px;
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Rubik';
-	padding: 14px 20px;
-	font-weight: 500;
-}
-/* title */
-/* title */
-/* title */
-.title {
-	font-weight: 500;
-	font-size: 40px;
-	color: #111;
-	text-align: center;
-	line-height: 100%;
-}
-.title span {
-	color: #0085FF;
-	font-family: inherit;
-	font-weight: inherit;
-}
-/* subtitle */
-/* subtitle */
-/* subtitle */
-.subtitle {
-	font-family: Inter;
-	font-size: 25px;
-	color: #111;
-	text-align: center;
-	line-height: 35px;
-	font-weight: 400;
-}
-.subtitle a {
-	position: relative;
-	text-decoration: underline;
-}
-/* tabs */
-/* tabs */
-/* tabs */
-.tabs {
-	position: relative;
-}
-.tabs__head {
-	color: #000;
-	background-color: #fff;
-}
-.tabs__item {
-	display: none;
-}
-.tabs__item--show {
-	display: block;
-}
-.fade {
-	-webkit-animation: .5s cubic-bezier(.6,0,.18,.99) tabContent;
-	animation: .5s cubic-bezier(.6,0,.18,.99) tabContent;
-}
-/* header */
-/* header */
-/* header */
+
+/* BASE */
+// fonts
+@import "common/components/base/fonts.less";
+// reset
+@import "common/components/base/reset.less";
+// base
+@import "common/components/base/base.less";
+
+/* UI */
+@import "common/components/repetitive/repetitive.less";
+
+
+/* SECTION */
+// header
 @import "common/components/header/header.less";
-/* main */
-/* main */
+// footer
+@import "common/components/footer/footer.less";
+// services
+@import "common/components/services-section/services-section.less";
+// clicks
+@import "common/components/clicks-section/clicks-section.less";
+// cases
+@import "common/components/cases-section/cases-section.less";
+// trust
+@import "common/components/trust-section/trust-section.less";
+// cause
+@import "common/components/cause-section/cause-section.less";
+// comments
+@import "common/components/comments-section/comments-section.less";
+// contact section
+@import "common/components/contact-section/contact-section.less";
+// qa-section
+@import "common/components/qa-section/qa-section.less";
+
+
+
 /* main */
 .main {
 	padding-top: 65px;
@@ -771,10 +595,6 @@ span {
 		padding-bottom: 60px;
 	}
 }
-/* services */
-/* services */
-/* services */
-@import "common/components/services-section/services-section.less";
 /* oport */
 /* oport */
 /* oport */
@@ -812,18 +632,6 @@ span {
 .oport__item{
 	width: 32%;
 }
-/* trust */
-/* trust */
-/* trust */
-@import "common/components/trust-section/trust-section.less";
-/* cause */
-/* cause */
-/* cause */
-@import "common/components/cause-section/cause-section.less";
-/* comments */
-/* comments */
-/* comments */
-@import "common/components/comments-section/comments-section.less";
 /* lets */
 /* lets */
 /* lets */
@@ -849,8 +657,6 @@ span {
 .lets__text{
 	margin-top: 12px;
 }
-/* qa-section */
-@import "common/components/qa-section/qa-section.less";
 
 
 /* get */
@@ -867,9 +673,6 @@ span {
 	text-align: center;
 }
 
-
-/* contact section */
-@import "common/components/contact-section/contact-section.less";
 
 
 
@@ -2277,9 +2080,3 @@ summary {
 
 
 
-/* clicks */
-@import "common/components/clicks-section/clicks-section.less";
-/* cases */
-@import "common/components/cases-section/cases-section.less";
-/* footer */
-@import "common/components/footer/footer.less";
