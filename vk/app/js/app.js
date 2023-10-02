@@ -3,6 +3,7 @@
 
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	// menu
@@ -24,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		scrollLock.enablePageScroll(scrollObject);
 	})
 
-
-
 	// fixed header
 	window.onscroll = function showHeader() {
 		var header = document.querySelector('.header');
@@ -35,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			header.classList.remove('header_fixed');
 		}
 	}
-
-
 
 	// dropdown
 	let dropdowns = document.querySelectorAll('.nav__dropdown');
@@ -52,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-
-
 	// graphmodal
 	// let $modalScroll = document.querySelector('.graph-modal');
 	// const modal = new GraphModal({
@@ -68,8 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// $('.vacancy__button').on('click', function(){
 	// 	$('.tyformail-modal').removeClass('graph-modal-open fadeInUp animate-open');
 	// })
-
-
 
 	// vlist
 	let vlistContent = document.querySelectorAll('.vlist__content');
