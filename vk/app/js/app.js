@@ -55,15 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	// graphmodal
-	let $modalScroll = document.querySelector('.graph-modal');
-	const modal = new GraphModal({
-		isOpen: (modal) => {
-			scrollLock.disablePageScroll($modalScroll);
-		},
-		isClose: () => {
-			scrollLock.enablePageScroll($modalScroll);
-		}
-	});
+	// let $modalScroll = document.querySelector('.graph-modal');
+	// const modal = new GraphModal({
+	// 	isOpen: (modal) => {
+	// 		scrollLock.disablePageScroll($modalScroll);
+	// 	},
+	// 	isClose: () => {
+	// 		scrollLock.enablePageScroll($modalScroll);
+	// 	}
+	// });
 
 	// $('.vacancy__button').on('click', function(){
 	// 	$('.tyformail-modal').removeClass('graph-modal-open fadeInUp animate-open');

@@ -160,7 +160,7 @@
 		right: -250px;
 	}
 	.main {
-		padding-bottom: 160px;
+		padding-bottom: 100px;
 		padding-top: 60px;
 	}
 	.main__wrapper {
@@ -195,7 +195,7 @@
 	.main {
 		padding-top: 35px;
 		background: url(../images/dist/main-shadow2.png) no-repeat calc(100% + 330px) -270px;
-		padding-bottom: 80px;
+		padding-bottom: 30px;
 	}
 	.main__wrapper {
 		flex-direction: column;
@@ -215,25 +215,34 @@
 		text-align: center;
 	}
 	.main__face{
-		justify-content: center;
+		justify-content: flex-start;
 	}
 	.main__list{
-		justify-content: center;
+		justify-content: start;
 	}
 	.main__bottom-row{
-		justify-content: center;
-		align-items: center;
+		justify-content: start;
+		align-items: start;
 	}
 	.main__right{
 		width: 80%;
 		margin: 0 auto;
 	}
+	.main__subtitle{
+		text-align: left;
+	}
+	.main__content{
+		max-width: 50%;
+	}
 }
 @media screen and (max-width: 767px){
 	.main__right{
-		width: 100%;
+		display: none;
 	}
 	.main__left,.main__title {
+		max-width: 100%;
+	}
+	.main__content{
 		max-width: 100%;
 	}
 }
@@ -316,10 +325,17 @@
 	display: block;
 	margin-bottom: 5px;
 }
+.adv__item-text a{
+	color: #0085FF;
+	border-bottom: 1px solid #0085FF;
+}
+.adv__item-text a:hover{
+	border-bottom: none;
+}
 @media screen and (max-width: 1370px){
 	.adv__item{
 		padding-right: 20px;
-		gap: 12px;
+		gap: 22px;
 		width: 31%;
 	}
 	.adv__box{
@@ -337,6 +353,7 @@
 @media screen and (max-width: 991px){
 	.adv{
 		padding-top: 70px;
+		padding-bottom: 100px;
 	}
 	.adv__item{
 		background: none;
@@ -749,6 +766,62 @@
 .oport__item{
 	width: 32%;
 }
+.oport__item-icon{
+	min-width: 50px;
+	height: 50px;
+	border-radius: 8px;
+	background: #CCE7FF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.oport__item-icon img{
+	max-width: 30px;
+	max-height: 30px;
+	width: auto;
+	height: auto;
+}
+.oport__item-img{
+	margin-bottom: 15px;
+}
+.oport__item-img img{
+	border-radius: 13px;
+	border: 1px solid #6695E2;
+	box-shadow: 0 3px 10px rgba(102, 149, 226, .3);
+}
+@media screen and (max-width: 1370px){
+	.oport__item-title{
+		font-size: 18px;
+	}
+	.oport__item-inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+@media screen and (max-width: 991px){
+	.oport__item{
+		width: 49%;
+	}
+}
+@media screen and (max-width: 767px){
+	.oport__item{
+		width: 100%;
+	}
+	.oport__item-inner{
+		flex-direction: row;
+	}
+	.oport__item-img img{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 574px){
+	.oport__item-title{
+		font-size: 16px;
+	}
+	.oport__item-text{
+		font-size: 12px;
+	}
+}
 /* lets */
 /* lets */
 /* lets */
@@ -792,6 +865,29 @@
 		padding-bottom: 100px;
 	}
 }
+
+/* VK LANDING STYLES */
+.vk__comments{
+	padding-top: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**/
