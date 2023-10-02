@@ -48,7 +48,7 @@ function scripts() {
 			mode: 'production',
 			performance: { hints: false },
 			plugins: [
-				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
+				// new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
 			],
 			module: {
 				rules: [
