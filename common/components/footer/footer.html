@@ -173,112 +173,18 @@
 			</div>
 		</div>
 	</footer>
-
-
-
 	<!-- Внешние скрипты -->
 	<!-- roll-network -->
-	<div class="roll-network">
-        <div class="block-roll">
-            <a href="#" onclick="Verbox('openSupport'); return false;" class="message-list">Задать вопрос</a>
-            <div class="ico-roll-network"></div>
-            <div class="block-roll-network">
-                <div class="item">
-					<a target="_blank" href="#" class="chat-chat-icon"
-                        onclick="Verbox('openSupport'); return false;">
-						Задать вопрос
-					</a></div>
-                <div class="item">
-					<a target="_blank" href="tel:+79251326680" class="chat-phone-icon">
-						Позвонить
-					</a>
-				</div>
-                <div class="item">
-					<a target="_blank" href="viber://pa?chatURI=botfaqtor-ru"
-                        class="chat-viber-icon">
-						Написать в Viber
-					</a>
-				</div>
-                <div class="item">
-					<a target="_blank" href="https://t.me/botfaqtor_bot"
-                        class="chat-teleg-icon">
-						Написать в Telegram
-					</a>
-				</div>
-                <div class="item">
-					<a target="_blank" href="https://vk.com/write-169372604" class="chat-vk-icon">
-						Написать в VK
-					</a>
-				</div>
-                <div class="item">
-					<a target="_blank" href="https://www.facebook.com/messages/t/359439317992661"
-                        class="chat-fb-icon">
-						Написать в Facebook
-					</a>
-				</div>
-            </div>
-        </div>
-    </div>
-	<!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFZDKB" height="0" width="0"
-		style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<script>
-        var fired = false;
-        window.addEventListener('scroll', () => {
-            if (fired === false) {
-                fired = true;
-                setTimeout(() => {
-                    var yaParams = {};
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('GET', 'https://ip.up66.ru/', true);
-                    xhr.onload = function () {
-                        yaParams.ip = this.responseText;
-                    }
-                    xhr.send();
-
-                    (function (m, e, t, r, i, k, a) {
-                        m[i] = m[i] || function () {
-                            (m[i].a = m[i].a || []).push(arguments)
-                        };
-                        m[i].l = 1 * new Date();
-                        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k
-                            .src = r, a.parentNode.insertBefore(k, a)
-                    })
-                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-                    ym(49731991, "init", {
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true,
-                        webvisor: true
-                    });
-
-                }, 1000)
-            }
-        });
-        // document.write("<a href='//www.liveinternet.ru/click' " +
-        //     "target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
-        //     escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
-        //         ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-        //             screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document
-        //         .URL) +
-        //     ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
-        //     "' alt='' title='LiveInternet' " +
-        //     "border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>"
-        // );
-    </script>
-
-	<script type="text/javascript"> (function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/3", false); request.send(); if(request.status == 200) eval(request.responseText); })(); </script>
-	
+	<!--#include virtual="../../../common/components/roll-network/roll-network.html" -->
+	<!-- Plugin google tag manager -->
+	<!--#include virtual="../../../common/components/google-tag-manager/gtm-bottom-document.html" -->
+	<!-- Plugin metrika -->
+	<!--#include virtual="../../../common/components/yandex.metrika/metrika-bottom-document.html" -->
+	<!-- Plugin metrika -->
+	<!--#include virtual="../../../common/components/botfaqtor-script-one-3/script.html" -->
 	<!-- Scripts -->
-	<!-- Roll network js -->
-	<script src="libs/roll-network/roll-network.js"></script>
-	<script src="libs/libs.min.js"></script>
-	<script src="libs/main.min.v2.js"></script>
-	<script>
-		wow = new WOW();
-		wow.init();
-	</script>
+	<script src="../js/app.min.js"></script>
+
 </body>
 
 </html>

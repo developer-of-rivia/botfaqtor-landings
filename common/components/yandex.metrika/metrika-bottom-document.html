@@ -1,0 +1,44 @@
+<script>
+    var fired = false;
+    window.addEventListener('scroll', () => {
+        if (fired === false) {
+            fired = true;
+            setTimeout(() => {
+                var yaParams = {};
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://ip.up66.ru/', true);
+                xhr.onload = function () {
+                    yaParams.ip = this.responseText;
+                }
+                xhr.send();
+
+                (function (m, e, t, r, i, k, a) {
+                    m[i] = m[i] || function () {
+                        (m[i].a = m[i].a || []).push(arguments)
+                    };
+                    m[i].l = 1 * new Date();
+                    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k
+                        .src = r, a.parentNode.insertBefore(k, a)
+                })
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+                ym(49731991, "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+
+            }, 1000)
+        }
+    });
+    // document.write("<a href='//www.liveinternet.ru/click' " +
+    //     "target=_blank><img src='//counter.yadro.ru/hit?t39.1;r" +
+    //     escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+    //         ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+    //             screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document
+    //         .URL) +
+    //     ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+    //     "' alt='' title='LiveInternet' " +
+    //     "border='0' width='31' height='31' style=\"position:absolute;left:-10000px;top:-10000px;\" ><\/a>"
+    // );
+</script>
