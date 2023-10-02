@@ -1,0 +1,115 @@
+.comments {
+	padding-bottom: 130px;
+}
+.comments__title {
+	margin-bottom: 50px;
+	text-align: left;
+}
+.comments__wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 20px;
+}
+.comments__item {
+	padding: 20px 30px;
+	border-radius: 15px;
+}
+.comments__item:hover {
+	box-shadow: 0 4px 40px 0 rgba(0,0,0,.15);
+}
+.comments__item-name {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	color: #111;
+}
+.comments__item-country {
+	line-height: 20px;
+	font-size: 14px;
+	color: #111;
+}
+.comments__item-info {
+	padding-bottom: 12px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-bottom: 12px;
+}
+.comments__item-client {
+	margin-bottom: 16px;
+	font-size: 14px;
+	line-height: 22px;
+	font-family: Inter;
+	font-weight: 400;
+}
+.comments__item-admins span {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	margin-bottom: 2px;
+}
+.comments__item-admins p {
+	font-size: 14px;
+	font-family: Inter;
+	line-height: 22px;
+}
+.comments__wrapper .comments__item:first-child {
+	width: 490px;
+	background: linear-gradient(to bottom,#fef9f5,#fffef2);
+}
+.comments__wrapper .comments__item:nth-child(2) {
+	width: 683px;
+	background: linear-gradient(to bottom,#f9fdf3,#fff);
+}
+.comments__wrapper .comments__item:nth-child(3) {
+	width: 683px;
+	background: linear-gradient(to bottom,#f6fcfe,#f7f9fd);
+}
+.comments__buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-right: 102px;
+	padding-top: 54px;
+}
+@media screen and (max-width: 1370px){
+	.comments__buttons {
+		width: 470px;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		padding-right: 0;
+		padding-top: 0;
+	}
+	.comments .comments__wrapper .comments__item {
+		width: 470px;
+	}
+}
+@media screen and (max-width: 991px){
+	.comments {
+		padding-bottom: 80px;
+	}
+	.comments .comments__wrapper .comments__item,.comments__buttons {
+		width: 100%;
+	}
+	.comments__buttons{
+		margin-top: 30px;
+	}
+}
+@media screen and (max-width: 767px){
+	.comments__title {
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 574px){
+	.comments__title {
+		text-align: center;
+	}
+	.comments__buttons {
+		width: 275px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.comments__buttons .comments__button {
+		width: 100%;
+	}
+}

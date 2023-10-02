@@ -1,5 +1,5 @@
 // import '../../../common/components/jquery/jquery-3.6.4.min.js';
-// import '../../../common/components/roll-network/roll-network.js';
+import '../../../common/components/roll-network/roll-network.js';
 
 
 
@@ -49,6 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+	const accordions = document.querySelectorAll('.accordion');
+
+	accordions.forEach(el => {
+		el.addEventListener('click', (e) => {
+			const self = e.currentTarget;
+			const control = self.querySelector('.accordion__control');
+			const content = self.querySelector('.accordion__content');
+
+			self.classList.toggle('open');
+
+			// если открыт аккордеон
+			if (self.classList.contains('open')) {
+				control.setAttribute('aria-expanded', true);
+				content.setAttribute('aria-hidden', false);
+				content.style.maxHeight = content.scrollHeight + 'px';
+			} else {
+				control.setAttribute('aria-expanded', false);
+				content.setAttribute('aria-hidden', true);
+				content.style.maxHeight = null;
+			}
+		});
+	});
+
 	// graphmodal
 	// let $modalScroll = document.querySelector('.graph-modal');
 	// const modal = new GraphModal({
@@ -65,25 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	// })
 
 	// vlist
-	let vlistContent = document.querySelectorAll('.vlist__content');
+	// let vlistContent = document.querySelectorAll('.vlist__content');
 
-	vlistContent.forEach(vlistContent => {
+	// vlistContent.forEach(vlistContent => {
 
-		let vlistText = vlistContent.querySelector('.vlist__text');
-		let vlistShowmore = vlistContent.querySelector('.vlist__showmore');
-		let vlistSalary = vlistContent.querySelector('.vlist__salary');
+	// 	let vlistText = vlistContent.querySelector('.vlist__text');
+	// 	let vlistShowmore = vlistContent.querySelector('.vlist__showmore');
+	// 	let vlistSalary = vlistContent.querySelector('.vlist__salary');
 
-		vlistShowmore.addEventListener('click', function() {
-			vlistText.classList.toggle('vlist__text_expand');
-			vlistSalary.classList.toggle('vlist__salary_open');
+	// 	vlistShowmore.addEventListener('click', function() {
+	// 		vlistText.classList.toggle('vlist__text_expand');
+	// 		vlistSalary.classList.toggle('vlist__salary_open');
 
-			if(vlistShowmore.innerText == 'Показать описание полностью'){
-				vlistShowmore.innerText = 'Скрыть описание';
-			}
-			else if(vlistShowmore.innerText == 'Скрыть описание'){
-				vlistShowmore.innerText = 'Показать описание полностью';
-			}
-		});
-	});
+	// 		if(vlistShowmore.innerText == 'Показать описание полностью'){
+	// 			vlistShowmore.innerText = 'Скрыть описание';
+	// 		}
+	// 		else if(vlistShowmore.innerText == 'Скрыть описание'){
+	// 			vlistShowmore.innerText = 'Показать описание полностью';
+	// 		}
+	// 	});
+	// });
 
 })

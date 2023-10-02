@@ -33,7 +33,7 @@ function browsersync() {
 	browserSync.init({
 		server: {
 			baseDir: `${folderName}/app/`,
-			middleware: bssi({ baseDir: `${folderName}/app/`, ext: '.html' })
+			middleware: bssi({ baseDir: `${folderName}/app/`, ext: '.html' }),
 		},
 		ghostMode: { clicks: false },
 		notify: false,

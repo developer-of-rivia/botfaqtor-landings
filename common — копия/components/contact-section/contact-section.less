@@ -1,0 +1,157 @@
+.cont {
+	height: 500px;
+	border-top: 1px solid rgba(0,0,0,.3);
+	position: relative;
+}
+.cont__container {
+	height: 100%;
+}
+.cont__title {
+	text-align: left;
+}
+.cont__wrapper {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	height: 100%;
+}
+.cont__left {
+	width: 450px;
+	height: 80%;
+	top: 10%;
+	left: 50%;
+	margin-left: -600px;
+	position: absolute;
+	z-index: 100;
+	background: #fff;
+	padding: 25px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 26px 0 rgba(0,0,0,.3);
+	display: flex;
+	flex-direction: column;
+}
+.cont__right {
+	width: 100%;
+	position: relative;
+}
+.cont__map {
+	background: gray;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.cont__map div {
+	height: 100%;
+}
+.cont__map iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	filter: grayscale(1);
+}
+.cont__text {
+	font-size: 16px;
+	color: #111;
+	line-height: 19px;
+	margin-bottom: auto;
+}
+.cont__info-item {
+	margin-bottom: 20px;
+}
+.cont__info-title {
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 10px;
+}
+.cont__info-mail {
+	color: #27c58b;
+	display: block;
+	margin-bottom: 10px;
+}
+.cont__info-mail:hover {
+	color: #03955f;
+	text-decoration: underline;
+}
+.cont__info-phone {
+	font-size: 16px;
+	color: #111;
+}
+.cont__info-phone:hover {
+	text-decoration: underline;
+}
+.map-circle-placemark {
+	background: red;
+}
+@media screen and (max-width: 1370px){
+	.cont__left {
+		width: 400px;
+		margin-left: -480px;
+	}
+
+	.cont__text {
+		max-width: 316px;
+	}
+}
+@media screen and (max-width: 991px){
+	.cont {
+		height: auto;
+	}
+	.cont__wrapper {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 30px;
+	}
+
+	.cont__left {
+		padding-top: 30px;
+		position: static;
+		max-width: 720px;
+		margin: 0 auto;
+		box-shadow: none;
+		width: 100%;
+	}
+	.cont__right {
+		width: 100%;
+		height: 400px;
+	}
+	.cont__map {
+		position: static;
+	}
+	.cont__text {
+		margin-bottom: 60px;
+	}
+	.cont__info {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+@media screen and (max-width: 767px){
+	.cont__wrapper {
+		gap: 20px;
+	}
+	.cont__left {
+		max-width: 500px;
+		padding: 30px 0 0;
+	}
+	.cont__text {
+		margin-bottom: 40px;
+	}
+	.cont__info {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 574px){
+	.cont__title {
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.cont__left {
+		padding-left: 15px;
+	}
+	.cont__right {
+		height: 350px;
+	}
+}
