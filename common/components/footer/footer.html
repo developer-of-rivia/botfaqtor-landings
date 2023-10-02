@@ -187,7 +187,19 @@
 	<!--#include virtual="../../../common/components/botfaqtor-script-one-3/script.html" -->
 
 	<!-- Scripts -->
-	<script src="../js/app.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+
+	<script>
+		$(".ico-roll-network").click(function () {
+			$(".block-roll").toggleClass("open-is");
+			return false;
+		});
+		$(".message-list, .chat-chat-icon").click(function () {
+			$(".block-roll").removeClass("open-is");
+			return false;
+		});
+	</script>
 </body>
 
 </html>
