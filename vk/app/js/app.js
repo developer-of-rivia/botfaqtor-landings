@@ -1,9 +1,3 @@
-// import '../../../common/components/jquery/jquery-3.6.4.min.js';
-// import '../../../common/components/roll-network/roll-network.js';
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
 	// menu
