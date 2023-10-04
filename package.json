@@ -5,9 +5,13 @@
 	"main": "index.js",
 	"author": "WebDesign Master",
 	"type": "module",
-	"browserslist": [ "last 10 versions" ],
+	"browserslist": [
+		"last 10 versions"
+	],
 	"license": "ISC",
-	"scripts": { "start": "gulp" },
+	"scripts": {
+		"start": "gulp"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.23.0",
 		"@babel/preset-env": "^7.22.20",
@@ -23,6 +27,7 @@
 		"gulp": "^4.0.2",
 		"gulp-changed": "^4.0.3",
 		"gulp-concat": "^2.6.1",
+		"gulp-html-replace": "^1.6.2",
 		"gulp-imagemin": "^8.0.0",
 		"gulp-less": "^5.0.0",
 		"gulp-less-glob": "^1.0.0",
