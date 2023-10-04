@@ -1117,12 +1117,242 @@
 		padding: 16px;
 	}
 }
+/* numbers */
+.numbers {
+	padding-bottom: 130px;
+}
 
+.numbers__box {
+	border: 1px solid #2276d4;
+	border-radius: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 37px 120px 56px 110px;
+	background: -webkit-gradient(linear,left top,left bottom,from(#edf8fd),to(#eef2fb));
+	background: -o-linear-gradient(top,#edf8fd,#eef2fb);
+	background: linear-gradient(to bottom,#edf8fd,#eef2fb);
+	position: relative;
+}
 
+.numbers__item {
+	text-align: center;
+	visibility: visible!important;
+}
 
+.numbers__item-count {
+	background: -webkit-gradient(linear,left top,right top,from(#409dec),to(#024cbb));
+	background: -o-linear-gradient(left,#409dec,#024cbb);
+	background: linear-gradient(to right,#409dec,#024cbb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 64px;
+	margin-bottom: 5px;
+}
 
+.numbers__item-text {
+	color: #111;
+	font-size: 16px;
+	line-height: 25px;
+}
 
+.numbers__updates {
+	font-size: 12px;
+	line-height: 30px;
+	color: rgba(0,0,0,.5);
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+}
+.numbers__item-count {
+	height: 64px;
+}
+[data-count="634522722"] {
+	width: 241px;
+}
+[data-count="31245000"] {
+	width: 216px;
+}
+[data-count="7062"] {
+	width: 121px;
+}
+[data-count="50312"] {
+	width: 167px;
+}
+@media screen and (max-width: 1370px){
+	.numbers {
+		padding-bottom: 80px;
+	}
 
+	.numbers__box {
+		padding: 37px 60px 56px;
+	}
+}
+@media screen and (max-width: 991px){
+	.numbers__box {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		row-gap: 30px;
+		padding: 37px 60px;
+	}
+
+	.numbers__item {
+		width: 45%;
+	}
+
+	.numbers__item-count {
+		line-height: 50px;
+	}
+}
+@media screen and (max-width: 767px){
+	.numbers__box {
+		padding: 35px;
+	}
+
+	.numbers__item-count {
+		font-size: 28px;
+		line-height: 38px;
+	}
+
+	.numbers__updates {
+		bottom: 5px;
+	}
+}
+@media screen and (max-width: 574px){
+	.numbers__box {
+		padding: 0;
+		border: none;
+		background: 0 0;
+	}
+
+	.numbers__updates {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px){
+	.numbers__item {
+		width: 100%;
+	}
+
+	.numbers__item-count {
+		font-size: 40px;
+		line-height: 64px;
+	}
+}
+/* byelama */
+/* byelama */
+/* byelama */
+.byelama-area {
+	padding-bottom: 130px;
+}
+
+.byelama {
+	border-radius: 20px;
+	background: #f7f9fd;
+	padding: 37px 40px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.byelama__top {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-bottom: 27px;
+}
+
+.byelama__title {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 36px;
+	color: #111;
+}
+
+.byelama__text {
+	margin-bottom: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 26px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.byelama__buttons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 30px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+@media screen and (max-width: 1370px){
+
+}
+@media screen and (max-width: 991px){
+	.byelama {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 767px){
+
+}
+@media screen and (max-width: 574px){
+	.byelama-area {
+		padding-bottom: 60px;
+	}
+
+	.byelama {
+		padding: 34px;
+	}
+
+	.byelama__top {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 15px;
+	}
+
+	.byelama__title {
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 480px){
+	.byelama__title {
+		text-align: center;
+	}
+
+	.byelama__buttons {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		gap: 20px;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+}
 
 
 
