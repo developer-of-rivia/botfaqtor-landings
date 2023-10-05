@@ -1,7 +1,7 @@
 /* libs */
 // import '../../../common/components/jquery/jquery-3.6.4.min.js';
 // import '../../../common/components/scroll-lock/scroll-lock.js';
-import '../../../common/components/roll-network/roll-network.js';
+import '../../../common/external-scripts/roll-network/roll-network.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
