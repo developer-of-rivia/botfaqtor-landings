@@ -1,10 +1,10 @@
 // LIBS
 @import 'common/plugins/graph-tabs/script.js';
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-
-
-	// SCRIPTS
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
 	let closeIcon = document.querySelector('.header__toggle-close');
