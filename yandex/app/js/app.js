@@ -132,4 +132,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-@import 'common/sections/calc-section/calc-section.js';
+@import 'common/sections/calc-section/calc-section2.js';
