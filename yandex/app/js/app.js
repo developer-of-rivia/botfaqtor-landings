@@ -128,3 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	// });
 
 })
+
+
+
+
+@import 'common/sections/calc-section/calc-section.js';
