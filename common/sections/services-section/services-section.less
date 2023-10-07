@@ -29,6 +29,9 @@
 	text-align: left;
 	margin-bottom: 40px;
 }
+.service__title_center{
+	text-align: center;
+}
 .service__item_33{
 	width: 32%;
 }
@@ -168,8 +171,13 @@
 	position: relative;
 	border-radius: 8px;
 	margin-right: 20px;
+	cursor: pointer;
+	transition: 0.2s ease;
 }
-.service__tabs-head_active{
+.service__tabs-head:hover{
+	background: #ddd;
+}
+.service__tabs-head.tabs__nav-btn--active{
 	background: #fff;
 }
 .service__tabs-head:after{
