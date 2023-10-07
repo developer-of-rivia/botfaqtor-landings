@@ -29,6 +29,7 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-html-replace": "^1.6.2",
 		"gulp-imagemin": "^8.0.0",
+		"gulp-js-import": "^1.0.6",
 		"gulp-less": "^5.0.0",
 		"gulp-less-glob": "^1.0.0",
 		"gulp-noop": "^1.0.1",

@@ -24,6 +24,8 @@
 @import "common/sections/cause-section/cause-section.less";
 // prot
 @import "common/sections/prot-section/prot-section.less";
+// services
+@import "common/sections/services-section/services-section.less";
 // comments
 @import "common/sections/comments-section/comments-section.less";
 // contact section
@@ -33,66 +35,9 @@
 
 /* PLUGINS */
 @import 'common/external-scripts/roll-network/roll-network.less';
+@import 'common/plugins/graph-tabs/style.less';
 
 
-/* redefinition */
-.link{
-	color: #EFB503;
-	border-color: #EFB503;
-}
-.title span{
-	color: #EFB503;
-}
-.cases{
-	background: #FFFCF4;
-}
-.btn{
-	background: #1A4A7F;
-	box-shadow: 0 0 30px rgba(26, 74, 127, .4);
-}
-.clicks__item:hover{
-	border-color: #EFB503;
-}
-.clicks__item:hover .clicks__item-link{
-	background: #EFB503;
-	border-color: #EFB503;
-}
-.price-sub__name span{
-	color: #EFB503;
-}
-.price-sub__month span{
-	color: #EFB503;
-}
-.price-sub{
-	border-color: #EFB503;
-}
-.oport__item{
-	background: #FFFCF4;
-}
-.oport__item-icon{
-	background: #FDF7E4;
-}
-.oport__item-icon svg{
-	fill: #EFB503;
-}
-.oport__item-icon_stroke svg{
-	fill: none;
-	stroke: #EFB503;
-}
-.oport__item-img img{
-	border-color: #EFB503;
-	box-shadow: 0 3px 10px rgba(239, 181, 3, .2);
-}
-.price-sub__button{
-	background: #EFB503;
-}
-.cases__item:hover{
-	border-color: #EFB503;
-}
-.cases__item:hover .cases__item-link{
-	background: #EFB503;
-	border-color: #EFB503;
-}
 
 
 /* YANDEX AD SECTIONS */
@@ -575,9 +520,16 @@
 	border-bottom: 1px solid #ececec;
 	font-size: 18px;
 }
-.price-basic__item-head span{
+.price-basic__item-title span{
 	font-weight: 600;
 	color: #EFB503;
+}
+.price-basic__item-subtitle{
+	font-size: 12px;
+	color: #333;
+}
+.price-basic__item-subtitle span{
+	font-weight: 600;
 }
 .price-basic__item-body{
 	padding: 0 20px;
@@ -598,12 +550,13 @@
 .price-basic__item-box li svg{
 	min-width: 16px;
 }
-.price-basic__item-box p{
+.price-basic__item-box-name{
 	color: #333;
 	font-size: 14px;
 }
-.price-basic__item-box p span{
-	font-weight: 700;
+.price-basic__item-box-cost{
+	color: #999;
+	font-size: 14px;
 }
 .price-basic__item-bottom{
 	display: flex;
@@ -668,9 +621,12 @@
 	gap: 50px;
 	padding: 60px 0;
 }
+.why .why__item:last-child{
+	padding-bottom: 0;
+}
 .why__image{
 	padding: 60px 48px;
-	background: #FFFCF4;
+	background: #F7F9FD;
 	border-radius: 22px;
 	flex-basis: 750px;
 }
@@ -691,10 +647,17 @@
 	min-width: 60px;
 	height: 60px;
 	border-radius: 8px;
-	background: #FDF7E2;
+	background: #F0F5FD;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+}
+.why__item-icon svg{
+	max-width: 30px;
+	max-height: 30px;
+	width: 28px;
+	height: auto;
+	fill: #4399FF;
 }
 .why__item-subtitle{
 	margin-top: 20px;
@@ -825,4 +788,93 @@
 }
 .table-tariff.col-table-3.table2p.active + .table-tariff.col-table-3.table2p.active{
     border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* redefinition */
+.link{
+	color: #EFB503;
+	border-color: #EFB503;
+}
+.title span{
+	color: #EFB503;
+}
+.cases{
+	background: #FFFCF4;
+}
+.btn{
+	background: #1A4A7F;
+	box-shadow: 0 0 30px rgba(26, 74, 127, .4);
+}
+.clicks__item:hover{
+	border-color: #EFB503;
+}
+.clicks__item:hover .clicks__item-link{
+	background: #EFB503;
+	border-color: #EFB503;
+}
+.price-sub__name span{
+	color: #EFB503;
+}
+.price-sub__month span{
+	color: #EFB503;
+}
+.price-sub{
+	border-color: #EFB503;
+}
+.oport__item{
+	background: #FFFCF4;
+}
+.oport__item-icon{
+	background: #FDF7E4;
+}
+.oport__item-icon svg{
+	fill: #EFB503;
+}
+.oport__item-icon_stroke svg{
+	fill: none;
+	stroke: #EFB503;
+}
+.oport__item-img img{
+	border-color: #EFB503;
+	box-shadow: 0 3px 10px rgba(239, 181, 3, .2);
+}
+.price-sub__button{
+	background: #EFB503;
+}
+.cases__item:hover{
+	border-color: #EFB503;
+}
+.cases__item:hover .cases__item-link{
+	background: #EFB503;
+	border-color: #EFB503;
+}
+.prot__tabs-head{
+	background: #FDF7E4;
+	color: #EFB503;
+}
+.prot__tabs-head.tabs__item--show{
+	border-color: #EFB503;
+}
+.why__image{
+	background: #FFFCF4;
+}
+.why__item-icon{
+	background: #FDF7E4;
+}
+.why__item-icon svg{
+	fill: #EFB503;
 }

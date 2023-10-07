@@ -9,6 +9,7 @@ const { gulp, src, dest, parallel, series, watch, task } = pkg
 import browserSync   from 'browser-sync'
 import bssi          from 'browsersync-ssi'
 import ssi           from 'ssi'
+import jsImport from 'gulp-js-import'
 import webpackStream from 'webpack-stream'
 import webpack       from 'webpack'
 import TerserPlugin  from 'terser-webpack-plugin'
@@ -43,41 +44,49 @@ function browsersync() {
 	})
 }
 
+// function scripts() {
+// 	return src([`${folderName}/app/js/*.js`, `!${folderName}/app/js/*.min.js`])
+// 		.pipe(webpackStream({
+// 			mode: 'production',
+// 			performance: { hints: false },
+// 			// plugins: [
+// 			// 	new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
+// 			// ],
+// 			module: {
+// 				rules: [
+// 					{
+// 						test: /\.m?js$/,
+// 						exclude: /(node_modules)/,
+// 						use: {
+// 							loader: 'babel-loader',
+// 							options: {
+// 								presets: ['@babel/preset-env'],
+// 								plugins: ['babel-plugin-root-import']
+// 							}
+// 						}
+// 					}
+// 				]
+// 			},
+// 			optimization: {
+// 				minimize: true,
+// 				minimizer: [
+// 					new TerserPlugin({
+// 						terserOptions: { format: { comments: false } },
+// 						extractComments: false
+// 					})
+// 				]
+// 			},
+// 		}, webpack)).on('error', (err) => {
+// 			this.emit('end')
+// 		})
+// 		.pipe(concat('app.min.js'))
+// 		.pipe(dest(`${folderName}/app/js`))
+// 		.pipe(browserSync.stream())
+// }
+
 function scripts() {
 	return src([`${folderName}/app/js/*.js`, `!${folderName}/app/js/*.min.js`])
-		.pipe(webpackStream({
-			mode: 'production',
-			performance: { hints: false },
-			plugins: [
-				// new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-			],
-			module: {
-				rules: [
-					{
-						test: /\.m?js$/,
-						exclude: /(node_modules)/,
-						use: {
-							loader: 'babel-loader',
-							options: {
-								presets: ['@babel/preset-env'],
-								plugins: ['babel-plugin-root-import']
-							}
-						}
-					}
-				]
-			},
-			optimization: {
-				minimize: true,
-				minimizer: [
-					new TerserPlugin({
-						terserOptions: { format: { comments: false } },
-						extractComments: false
-					})
-				]
-			},
-		}, webpack)).on('error', (err) => {
-			this.emit('end')
-		})
+		.pipe(jsImport({hideConsole: true}))
 		.pipe(concat('app.min.js'))
 		.pipe(dest(`${folderName}/app/js`))
 		.pipe(browserSync.stream())
