@@ -1,19 +1,11 @@
-$(".burger-menu").click(function () {
-    $(".menu-items").toggleClass("open");
-})
-
-$("#close-banner").click(function(){
-    $(".header").css('');
-    $("#banner-top").html('');
-    return false;
-});
-
 $(".calculator input").keyup(function () {
     $(this).val(thousandSeparator($(this).val().replace(/[^0-9]/g, "")));
     var yandex = $("[name='yandex']").val().replace(/\s/g, '');
     var google = $("[name='google']").val().replace(/\s/g, '');
+    var vk = $("[name='vk']").val().replace(/\s/g, '');
     var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
     var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+    var pricevk = $("[name='pricevk']").val().replace(/\s/g, '');
     //var theme = $(".theme option").prop('selected', true).change().attr('data');
     var theme = "";
 
@@ -51,9 +43,23 @@ $(".calculator input").keyup(function () {
         }
     }
 
+    if(pricevk == ''){
+        if(theme == undefined){
+            resultvk = (vk / 100 * theme)*50;
+        }else{
+            resultvk = (vk / 100 * 25)*50;
+        }
+    }else{
+        if(theme == undefined){
+            resultvk = (vk / 100 * theme)*pricevk;
+        }else{
+            resultvk = (vk / 100 * 25)*pricevk;
+        }
+    }
 
 
-    resultSUM = resultyandex+resultgoogle;
+
+    resultSUM = resultyandex+resultgoogle+resultvk;
     var sumyear = resultSUM*12
 
     
@@ -71,9 +77,11 @@ $(".calculator input").keyup(function () {
 $(".calculator select").change(function(){
     var yandex = $("[name='yandex']").val().replace(/\s/g, '');
     var google = $("[name='google']").val().replace(/\s/g, '');
+    var vk = $("[name='vk']").val().replace(/\s/g, '');
 
     var priceyandex = $("[name='priceyandex']").val().replace(/\s/g, '');
     var pricegoogle = $("[name='pricegoogle']").val().replace(/\s/g, '');
+    var pricevk = $("[name='pricevk']").val().replace(/\s/g, '');
 
     var theme = "";
     $( ".calculator select option:selected" ).each(function() {
@@ -94,7 +102,14 @@ $(".calculator select").change(function(){
     }
 
 
-    resultSUM = resultyandex+resultgoogle;
+    if(pricevk == ''){
+        resultvk = (vk / 100 * theme)*50;
+    }else{
+        resultvk = (vk / 100 * theme)*pricevk
+    }
+
+
+    resultSUM = resultyandex+resultgoogle+resultvk;
     var sumyear = resultSUM*12
 
     
@@ -128,23 +143,3 @@ if (parts.length > 1) {
 }
 return output;
 };
-
-
-
-
-$(".clicklogin").click(function () {
-    location.href = 'https://botfaqtor.ru/signin';
-    return false;
-});
-
-$(".click-project").click(function () {
-    var click = "1";
-    $(".project-title").toggleClass("is-open");
-});
-
-$(document).mouseup(function (e) {
-    var div = $(".project-title");
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-        div.removeClass("is-open");
-    }
-});
