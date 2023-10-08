@@ -228,56 +228,224 @@
 	<!-- cases --> 
 	<!--#include virtual="../../common/sections/cases-section/cases-section.html" -->
 	<!-- sites -->
-	<!-- <div class="sites">
+	<div class="sites">
 		<div class="container sites__container">
 			<h2 class="sites__title title">
 				Качество площадок в РСЯ (ТОП-50) beta
 			</h2>
 			<div class="sites__wrapper">
 				<div class="sites__table-wrap">
-					<table class="mt-2 rotate-phone disable-selection">
+					<div class="sites__subtitle">
+						Мы собираем данные со всех клиентов, использующих РСЯ и выводим их в отчете ТОП-50 Площадок РСЯ. <br>
+						В личном кабинете выводятся данные по вашим кампаниям.
+					</div>
+					<table class="sites__table">
 						<thead>
-							<th class="s-n dated" data-title="Дата">
-								<span>Дата покупки</span>
-								<span></span>
-							</th>
-							<th class="s-n" data-title="Название">
-								<span>Название сети</span>
-								<span></span>
-							</th>
-							<th class="text-center s-n" data-title="Тип">
-								<span>Тип трафика</span>
-								<span></span>
-							</th>
-							<th class="text-center">
-								<strong class="ico-stat-09"></strong><span>Сколько купили</span>
-								<span></span>
-							</th>
-							<th class="text-center green">
-								<strong class="ico-stat-01"></strong><span>Целевой</span>
-								<span></span>
-							</th>
-							<th class="text-center blue" style="width: 11% !important;">
-								<strong class="ico-stat-02"></strong><span>Нецелевой</span>
-								<span></span>
-							</th>
-							<th class="text-center red">
-								<strong class="ico-stat-03"></strong><span>Боты</span>
-								<span></span>
-							</th>
-							<th class="text-center s-n" data-title="Роботность">
-								<span>Роботность Яндекс.Метрика</span>
-								<span></span>
-							</th>
+							<tr>
+								<th>
+									<span>#</span>
+								</th>
+								<th>
+									<span>Адрес площадки (URL)</span>
+								</th>
+								<th>
+									<span>Целевой</span>
+								</th>
+								<th>
+									<span>Нецелевой</span>
+								</th>
+								<th>
+									<span>Подозриельные</span>
+								</th>
+								<th>
+									<span>Боты</span>
+								</th>
+							</tr>
 						</thead>
-						<tbody class="jsGetSourcesChecks">
-		
+						<tbody>
+							<tr>
+								<td>
+									1
+								</td>
+								<td>
+									yandex.ru
+								</td>
+								<td>
+									48%
+								</td>
+								<td>
+									38%
+								</td>
+								<td>
+									10%
+								</td>
+								<td>
+									4%
+								</td>
+							</tr>
+							<tr>
+								<td>
+									1
+								</td>
+								<td>
+									yandex.ru
+								</td>
+								<td>
+									48%
+								</td>
+								<td>
+									38%
+								</td>
+								<td>
+									10%
+								</td>
+								<td>
+									4%
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
+
+
+	<style>
+		.SourcesCheck {
+    position: relative;
+    padding-bottom: 80px
+}
+
+.SourcesCheck .wrapper {
+    height: 600px;
+    overflow: hidden
+}
+
+.SourcesCheck h2 {
+    color: #455a64;
+    text-align: center;
+    padding: 60px 0
+}
+
+.SourcesCheck .widget-container {
+    display: block;
+    border-radius: 3px;
+    border: 30px solid #ddd;
+    padding: 25px 25px 0 25px;
+    margin: 0;
+    color: #4f5a7c;
+    font-size: 14px
+}
+
+.SourcesCheck::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 413px;
+    background: #fff;
+    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 50%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 50%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1)
+}
+
+.SourcesCheck table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%
+}
+
+.SourcesCheck .mt-2 {
+    margin-top: 25px
+}
+
+.SourcesCheck table tr td:nth-child(1),
+.SourcesCheck table tr th:nth-child(1) {
+    width: initial
+}
+
+.SourcesCheck table tr td:nth-child(2),
+.SourcesCheck table tr th:nth-child(2) {
+    width: 150px
+}
+
+.SourcesCheck .btn {
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    padding: 17.5px 60px;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    margin: 0 auto 0 auto
+}
+
+.SourcesCheck .btn:hover {
+    background-color: #199f6e !important;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out
+}
+
+.rotate-block {
+    display: none
+}
+
+.SourcesCheck table thead th {
+    padding: 5px;
+    text-align: left;
+    font-weight: 700;
+    color: #4f5a7c;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.SourcesCheck table tr td {
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px
+}
+
+.SourcesCheck div.lable label {
+    display: block;
+    float: left;
+    margin-right: 10px
+}
+
+.SourcesCheck label.favicon img {
+    width: 16px;
+    height: 16px
+}
+
+.SourcesCheck .text-labl {
+    line-height: 19px !important;
+    padding-top: 0
+}
+
+.SourcesCheck .widget-title {
+    font-size: 20px;
+    color: #6695e2;
+    text-align: center;
+    font-weight: 300;
+    display: block
+}
+
+.SourcesCheck tr:hover {
+    background: #f5f5f5
+}
+
+.SourcesCheck .center-position {
+    position: relative;
+    z-index: 5;
+    text-align: center
+}
+	</style>
+
+
 	<!-- why -->
 	<div class="why">
 		<div class="container">
