@@ -20,10 +20,14 @@
 @import "common/sections/cases-section/cases-section.less";
 // trust
 @import "common/sections/trust-section/trust-section.less";
+// price-basic
+@import "common/sections/price-basic/price-basic.less";
 // calc
 @import "common/sections/calc-section/calc-section.less";
 // cause
 @import "common/sections/cause-section/cause-section.less";
+// why
+@import "common/sections/why-section/why-section.less";
 // prot
 @import "common/sections/prot-section/prot-section.less";
 // services
@@ -100,6 +104,12 @@
 	max-width: 25px;
 	max-height: 25px;
 }
+.main__list-icon{
+	width: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
 .main__bottom-row{
 	display: flex;
 	align-items: center;
@@ -110,15 +120,20 @@
 	padding-top: 30px;
 	max-width: 520px;
 }
-.main__bottom-price{
-	font-weight: 500;
-	color: #333;
-}
-.main__bottom-price span{
-	color: #EFB503;
+.main__bottom-link{
 	font-size: 20px;
+	font-weight: 500;
 	font-family: 'Inter';
 }
+// .main__bottom-price{
+// 	font-weight: 500;
+// 	color: #333;
+// }
+// .main__bottom-price span{
+// 	color: #EFB503;
+// 	font-size: 20px;
+// 	font-family: 'Inter';
+// }
 .main__subtitle{
 	font-size: 16px;
 	line-height: 130%;
@@ -156,6 +171,13 @@
 	color: #999FA9;
 	font-size: 14px;
 	line-height: 150%;
+}
+.main__vkorder-text a{
+	color: #333;
+	text-decoration: underline;
+}
+.main__vkorder-text a:hover{
+	text-decoration: none;
 }
 .main__more{
 	font-size: 20px;
@@ -821,6 +843,9 @@
 	background: #1A4A7F;
 	box-shadow: 0 0 30px rgba(26, 74, 127, .4);
 }
+.btn:hover{
+	background: #2366ad;
+}
 .clicks__item:hover{
 	border-color: #EFB503;
 }
@@ -895,4 +920,16 @@
 }
 .footer__link.footer__link--hl{
 	color: #EFB503;
+}
+.header__info-phone:hover{
+	color: #EFB503;
+}
+.header__info-mail:hover{
+	color: #EFB503;
+}
+.price-basic__item:hover .price-basic__item-box li svg{
+	fill: #EFB503;
+}
+.why__item-icon_stroke{
+	stroke: #EFB503;
 }
