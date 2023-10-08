@@ -1,4 +1,4 @@
-let folderName = 'yandex';
+let folderName = 'antibot';
 
 let preprocessor = 'less', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
 	fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
