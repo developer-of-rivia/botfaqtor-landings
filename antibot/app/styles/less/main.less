@@ -741,6 +741,17 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+.antiprot__item-count:after{
+	content: '';
+	width: 2px;
+	height: 20px;
+	position: absolute;
+	left: 16px;
+	bottom: -36px;
+	background: #29B74D;
+	border-radius: 5px;
 }
 .antiprot__area{
 	margin-top: 50px;
@@ -748,6 +759,9 @@
 	border-top: 1px solid rgba(41, 183, 77, .2);
 	border-bottom: 1px solid rgba(41, 183, 77, .2);
 	background: url(../images/dist/antiprot-bg.jpg) no-repeat center center/cover;
+}
+.antiprot__box .antiprot__item:last-child .antiprot__item-count:after{
+	display: none;
 }
 
 
