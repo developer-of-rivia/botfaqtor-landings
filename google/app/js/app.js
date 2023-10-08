@@ -133,10 +133,36 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		}
 	// 	});
 	// });
-
 })
 
 
 
 
 @import 'common/sections/calc-section/calc-section2.js';
+
+
+
+
+$( document ).ready(function() {
+	// Результат замера источников трафика
+	$.getJSON("common/sections/sites/sources-check.json", function (data) {
+		$.each(data, function (i, item) {
+	
+			var str = item['CheckDate'];
+			var res = str.split("-", 2);
+			var res = str.split("T", 1);
+			var temp = res;
+	
+			$(".jsGetSourcesChecks").append('<tr>'
+				+ '<td>' + temp + '</td>'
+				+ '<td><div class="lable"><label class="checkbox favicon"><img alt=""src="https://s2.googleusercontent.com/s2/favicons?domain_url=' + item['Source'] + '"></label></div><label class="text-labl">' + item['Source'] + '</label></td>'
+				+ '<td class="text-center">' + item['TrafficTypeName'] + '</td>'
+				+ '<td class="text-center">' + item['TotalRounding'] + 'К</td>'
+				+ '<td class="text-center">' + item['TargetedPercent'] + '%</td>'
+				+ '<td class="text-center">' + item['UntargetedPercent'] + '%</td>'
+				+ '<td class="text-center">' + item['BotsPercent'] + '%</td>'
+				+ '<td class="text-center">' + item['ComparisonBotParameter'] + '%</td>'
+				+ '</tr>');
+		});
+	});
+});
