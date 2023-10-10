@@ -61,46 +61,54 @@
 .prot__content-title {
 	text-align: left;
 	font-size: 36px;
-	line-height: 100%;
+	line-height: 120%;
 	max-width: 380px;
 	margin-bottom: 15px;
+	font-weight: 500;
 }
-.prot__content-text {
+.prot__content-typo {
 	color: rgba(0,0,0,.6);
-	margin-bottom: 62px;
 	font-weight: 500;
 	line-height: 130%;
 	font-family: Inter;
 }
-.prot__content-text p {
+.prot__content-typo p {
 	margin-bottom: 20px;
 }
-.prot__content-text a:hover {
+.prot__content-typo a:hover {
 	text-decoration: none;
 }
-.prot__content-text span {
+.prot__content-typo span {
 	font-weight: 700;
 	color: #333;
 }
-.prot__content-text h3{
+.prot__content-typo h3{
 	font-size: 28px;
 	font-weight: 500;
 	color: #111;
 	line-height: 120%;
 	margin-bottom: 20px;
+	margin-top: 30px;
 }
-.prot__content-text-num{
+.prot__content-typo-num{
 	list-style-type: none; 
 	counter-reset: num;
 }
-.prot__content-text-num li{
+.prot__content-typo-num li{
 	position: relative;
 	margin-bottom: 10px;
+	display: flex;
+	gap: 5px;
+	align-items: flex-start;
 }
-.prot__content-text-num li:before{
+.prot__content-typo-num li:before{
 	content: counter(num) '.'; 
 	counter-increment: num;
 	display: inline-block;
+	font-weight: 700;
+}
+.prot__content-typo ul li{
+	margin-bottom: 10px;
 }
 @media screen and (max-width: 1370px){
     .prot {
