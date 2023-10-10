@@ -119,7 +119,6 @@
 	margin-top: 30px;
 }
 .main__content{
-	padding-top: 30px;
 	max-width: 520px;
 }
 .main__bottom-link{
@@ -127,21 +126,13 @@
 	font-weight: 500;
 	font-family: 'Inter';
 }
-// .main__bottom-price{
-// 	font-weight: 500;
-// 	color: #333;
-// }
-// .main__bottom-price span{
-// 	color: #EFB503;
-// 	font-size: 20px;
-// 	font-family: 'Inter';
-// }
 .main__subtitle{
 	font-size: 16px;
 	line-height: 130%;
 	color: #111;
 	max-width: 450px;
 	margin-bottom: 25px;
+	font-family: 'Roboto';
 }
 .main__face{
 	display: flex;
@@ -174,6 +165,7 @@
 	font-size: 14px;
 	line-height: 150%;
 	margin-bottom: 14px;
+	font-family: 'Inter';
 }
 .main__vkorder-text a{
 	color: #333;
@@ -484,6 +476,8 @@
 }
 .lets__text{
 	margin-top: 12px;
+	font-size: 24px;
+	font-family: 'Inter';
 }
 @media screen and (max-width: 991px){
 	.lets{
@@ -492,6 +486,9 @@
 	}
 	.lets__title{
 		font-size: 30px;
+	}
+	.lets__text{
+		font-size: 16px;
 	}
 }
 /* get */
@@ -516,104 +513,25 @@
 		margin-bottom: 20px;
 	}
 }
-
-
-
-
-
-
 /**/
 .roll-network_scrollbottom {
 	bottom: 95px !important;
 }
-
-/* tooltip */
-.tooltip-trigger {
-    display: inline-block;
-    z-index: 9999999;
-}
-.icon-tooltip {
-    justify-content: center;
-    color: #fff;
-    display: flex;
-    background: #999999;
-    height: 16px;
-    width: 16px;
-    font-size: 12px !important;
-    align-items: center;
-    border-radius: 16px;
-	line-height: 16px;
-}
-.tooltip-content {
-    font-size: 14px;
-    max-width: 320px;
-    min-width: 160px;
-    position: absolute;
-    display: none;
-    padding: 10px 0 0;
-    left: 50%;
-    top: 20px;
-    opacity: 1;
-    transform: translate(-50%, 0);
-    transition: 200ms 100ms opacity, 300ms 100ms transform;
-    z-index: 999999;
-}
-.tooltip-content__arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #fff;
-    position: absolute;
-    top: 5px;
-    left: calc(50% - 5px);
-}
-.tooltip:hover .tooltip-content {
-    display: block;
-}
-.tooltip {
-    position: relative;
-    top: -2px;
-    cursor: pointer;
-}
-.tooltip-content__body {
-    display: block;
-    background: #fff;
-    font-weight: 400;
-    color: #2f383e;
-    max-width: 320px;
-    border-radius: 3px;
-    padding: 15px;
-    box-shadow: 0px 4px 24px rgb(0 0 0 / 15%);
-}
-.table-tariff:hover{
-    z-index: 999;
-}
-.table-tariff.col-table-3.table2p.active + .table-tariff.col-table-3.table2p.active{
-    border-left: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* переопределение */
 .link{
 	color: #EFB503;
 	border-color: #EFB503;
 }
+.link_color2{
+	color: #1A4A7F;
+	border-color: #1A4A7F;
+}
 .title span{
 	color: #EFB503;
+}
+.header__account{
+	color: #1a4a7f;
+	border-color: #1a4a7f;
 }
 .cases{
 	background: #FFFCF4;
@@ -744,4 +662,21 @@
 }
 .price-basic__item-subtitle span{
 	color: #EFB503;
+}
+.byelama__register.link{
+	color: #1A4A7F;
+	border-color: #1A4A7F;
+}
+.sites__block{
+	border-color: #FFFCF4;
+}
+@media screen and (max-width: 991px){
+	.header__info-phone{
+		color: #1A4A7F;
+	}
+	.header__connect{
+		box-shadow: none;
+		background: none;
+		color: #1A4A7F;
+	}
 }
