@@ -15,10 +15,10 @@
 	padding-bottom: 0;
 }
 .why__image{
-	padding: 60px 48px;
+	padding: 55px;
 	background: #F7F9FD;
 	border-radius: 22px;
-	flex-basis: 750px;
+	max-width: 750px;
 }
 .why__item-content{
 	flex-basis: 520px;
@@ -67,6 +67,10 @@
 .why__item-text p{
 	margin-bottom: 10px;
 }
+.why__item-text p span{
+	font-weight: 500;
+	color: #333;
+}
 .why__btn{
 	margin-top: 25px;
 }
@@ -81,7 +85,7 @@
 	}
 	.why__image{
 		padding: 30px;
-		flex-basis: 540px;
+		max-width: 540px;
 	}
 	.why__item-title span{
 		font-size: 26px;
@@ -102,7 +106,7 @@
 		flex-direction: column-reverse;
 	}
 	.why__image{
-		flex-basis: auto;
+		max-width: none;
 	}
 	.why__item-content{
 		flex-basis: auto;
