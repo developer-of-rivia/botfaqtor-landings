@@ -73,145 +73,89 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	loadMapBlock.classList.contains("_loaded") || getMap();
+})
+// slider
+// slider
+// slider
+const slider = document.querySelector('.slider');
+const before = document.querySelector('.before');
+const beforeImage = before.querySelector('img');
+const change = document.querySelector('.change');
+const body = document.body;
 
+let isActive = false;
 
+document.addEventListener('DOMContentLoaded', () => {
+	let width = slider.offsetWidth;
+	beforeImage.style.width = `${width}px`;
+	beforeImage.style.minWidth = `${width}px`;
+});
 
+change.addEventListener('mousedown', () => {
+	isActive = true;
+});
 
-	const tabs1 = new GraphTabs('tab', {
-		isChanged: (tabs) => {
-		  console.log(tabs);
-		}
-	});
+body.addEventListener('mouseup', () => {
+	isActive = false;
+});
 
+body.addEventListener('mouseleave', () => {
+	isActive = false;
+});
 
-	const tabsService = new GraphTabs('service-tab', {
-		isChanged: (tabs) => {
-		  console.log(tabs);
-		}
-	});
+const beforeAfterSlider = (x) => {
+	let shift = Math.max(0, Math.min(x, slider.offsetWidth));
+	before.style.width = `${shift}px`;
+	change.style.left = `${shift}px`;
 
-
-
-
-
-	const slider = document.querySelector('.slider');
-	const before = document.querySelector('.before');
-	const beforeImage = before.querySelector('img');
-	const change = document.querySelector('.change');
-	const body = document.body;
-
-	let isActive = false;
-
-	document.addEventListener('DOMContentLoaded', () => {
-		let width = slider.offsetWidth;
-		beforeImage.style.width = `${width}px`;
-		beforeImage.style.minWidth = `${width}px`;
-	});
-
-	change.addEventListener('mousedown', () => {
-		isActive = true;
-	});
-
-	body.addEventListener('mouseup', () => {
-		isActive = false;
-	});
-
-	body.addEventListener('mouseleave', () => {
-		isActive = false;
-	});
-
-	const beforeAfterSlider = (x) => {
-		let shift = Math.max(0, Math.min(x, slider.offsetWidth));
-		before.style.width = `${shift}px`;
-		change.style.left = `${shift}px`;
-
-		if(change.style.left < '180px'){
-			console.log(change.style.left);
-		}
-	};
-
-	const pauseEvents = (e) => {
-		e.stopPropagation();
-		e.preventDefault();
-		return false;
-	};
-
-	body.addEventListener('mousemove', (e) => {
-		if (!isActive) {
-			return;
-		}
-
-		let x = e.pageX;
-		x -= slider.getBoundingClientRect().left;
-		beforeAfterSlider(x);
-		pauseEvents(e);
-	});
-
-	change.addEventListener('touchstart', () => {
-		isActive = true;
-	});
-
-	body.addEventListener('touchend', () => {
-		isActive = false;
-	});
-
-	body.addEventListener('touchcancel', () => {
-		isActive = false;
-	});
-
-	body.addEventListener('touchmove', (e) => {
-		if (!isActive) {
-			return;
-		}
-
-	let x;
-	
-	let i;
-	for (i = 0; i < e.changedTouches.length; i++) {
-		x = e.changedTouches[i].pageX; 
+	if(change.style.left < '180px'){
+		console.log(change.style.left);
 	}
-	
-	x -= slider.getBoundingClientRect().left;
+};
 
+const pauseEvents = (e) => {
+	e.stopPropagation();
+	e.preventDefault();
+	return false;
+};
+
+body.addEventListener('mousemove', (e) => {
+	if (!isActive) {
+		return;
+	}
+
+	let x = e.pageX;
+	x -= slider.getBoundingClientRect().left;
 	beforeAfterSlider(x);
 	pauseEvents(e);
-	});
+});
 
+change.addEventListener('touchstart', () => {
+	isActive = true;
+});
 
-	// graphmodal
-	// let $modalScroll = document.querySelector('.graph-modal');
-	// const modal = new GraphModal({
-	// 	isOpen: (modal) => {
-	// 		scrollLock.disablePageScroll($modalScroll);
-	// 	},
-	// 	isClose: () => {
-	// 		scrollLock.enablePageScroll($modalScroll);
-	// 	}
-	// });
+body.addEventListener('touchend', () => {
+	isActive = false;
+});
 
-	// $('.vacancy__button').on('click', function(){
-	// 	$('.tyformail-modal').removeClass('graph-modal-open fadeInUp animate-open');
-	// })
+body.addEventListener('touchcancel', () => {
+	isActive = false;
+});
 
-	// vlist
-	// let vlistContent = document.querySelectorAll('.vlist__content');
+body.addEventListener('touchmove', (e) => {
+	if (!isActive) {
+		return;
+	}
 
-	// vlistContent.forEach(vlistContent => {
+let x;
 
-	// 	let vlistText = vlistContent.querySelector('.vlist__text');
-	// 	let vlistShowmore = vlistContent.querySelector('.vlist__showmore');
-	// 	let vlistSalary = vlistContent.querySelector('.vlist__salary');
+let i;
+for (i = 0; i < e.changedTouches.length; i++) {
+	x = e.changedTouches[i].pageX; 
+}
 
-	// 	vlistShowmore.addEventListener('click', function() {
-	// 		vlistText.classList.toggle('vlist__text_expand');
-	// 		vlistSalary.classList.toggle('vlist__salary_open');
+x -= slider.getBoundingClientRect().left;
 
-	// 		if(vlistShowmore.innerText == 'Показать описание полностью'){
-	// 			vlistShowmore.innerText = 'Скрыть описание';
-	// 		}
-	// 		else if(vlistShowmore.innerText == 'Скрыть описание'){
-	// 			vlistShowmore.innerText = 'Показать описание полностью';
-	// 		}
-	// 	});
-	// });
-})
+beforeAfterSlider(x);
+pauseEvents(e);
+});

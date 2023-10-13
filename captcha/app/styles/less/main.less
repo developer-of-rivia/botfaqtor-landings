@@ -16,8 +16,6 @@
 @import "common/sections/footer/footer.less";
 // trust
 @import "common/sections/trust-section/trust-section.less";
-// calc
-@import "common/sections/calc-section/calc-section.less";
 // cause
 @import "common/sections/cause-section/cause-section.less";
 // services
@@ -28,12 +26,9 @@
 @import "common/sections/contact-section/contact-section.less";
 // qa-section
 @import "common/sections/qa-section/qa-section.less";
-// sites-section
-@import "common/sections/sites-section/sites-section.less";
 
 /* PLUGINS */
 @import 'common/external-scripts/roll-network/roll-network.less';
-@import 'common/plugins/graph-tabs/style.less';
 
 
 
@@ -42,8 +37,8 @@
 /* main */
 .main {
 	padding-top: 80px;
-	padding-bottom: 200px;
-	background: url(../img/dist/main-shadow2.png) no-repeat calc(100% + 70px) -80px;
+	padding-bottom: 100px;
+	background: url(../images/dist/main-shadow2.png) no-repeat calc(100% + 70px) -80px;
 	margin-top: 81px;
 }
 .main__container {
@@ -187,7 +182,7 @@
 	transform: translate(-50%, -50%);
 	border: 2px solid #cdcdcd;
 	cursor: pointer;
-	background: url(../img/dist/left-right-arrow.svg) no-repeat center center, #fff;
+	background: url(../images/dist/left-right-arrow.svg) no-repeat center center, #fff;
 }
 .change:after:hover{
 	transform: scale(1.1);
@@ -271,7 +266,7 @@
 @media screen and (max-width: 991px){
 	.main {
 		padding-top: 35px;
-		background: url(../img/dist/main-shadow2.png) no-repeat calc(100% + 330px) -270px;
+		background: url(../images/dist/main-shadow2.png) no-repeat calc(100% + 330px) -270px;
 		padding-bottom: 80px;
 	}
 	.main__wrapper {
@@ -352,7 +347,7 @@
 /* adv */
 /* adv */
 .adv{
-	padding-bottom: 120px;
+	padding: 60px 0;
 }
 .adv__box{
 	display: flex;
@@ -374,7 +369,7 @@
 .adv__item-img{
 	min-width: 60px;
 	height: 60px;
-	background: #CCE7FF;
+	background: #F3E9DB;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -414,8 +409,7 @@
 }
 @media screen and (max-width: 991px){
 	.adv{
-		padding-top: 70px;
-		padding-bottom: 100px;
+		padding: 50px 0;
 	}
 	.adv__item{
 		background: none;
@@ -462,7 +456,7 @@
 /* point */
 /* point */
 .point{
-	padding-top: 120px;
+	padding: 60px 0;
 }
 .point-item{
 	display: flex;
@@ -597,7 +591,7 @@
 /* price */
 /* price */
 .price{
-	padding: 120px 0;
+	padding: 60px 0;
 }
 .price__title{
 	margin-bottom: 12px;
@@ -921,10 +915,6 @@
 .link{
 	color: #ef911f;
 	border-color: #ef911f;
-}
-.link_color2{
-	color: #1A4A7F;
-	border-color: #1A4A7F;
 }
 .btn{
 	background: linear-gradient(to right, #F9BF14, #F97616);
