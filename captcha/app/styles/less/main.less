@@ -16,16 +16,12 @@
 @import "common/sections/footer/footer.less";
 // trust
 @import "common/sections/trust-section/trust-section.less";
-// price-basic
-@import "common/sections/price-basic/price-basic.less";
 // calc
 @import "common/sections/calc-section/calc-section.less";
 // cause
 @import "common/sections/cause-section/cause-section.less";
 // services
 @import "common/sections/services-section/services-section.less";
-// price
-@import "common/sections/price-section/price-section.less";
 // comments
 @import "common/sections/comments-section/comments-section.less";
 // contact section
@@ -922,8 +918,64 @@
 
 
 /* переопределения */
-.why .checked__socials-item,
-.main .checked__socials-item{
-	flex-direction: row;
-	align-items: center;
+.link{
+	color: #ef911f;
+	border-color: #ef911f;
+}
+.link_color2{
+	color: #1A4A7F;
+	border-color: #1A4A7F;
+}
+.btn{
+	background: linear-gradient(to right, #F9BF14, #F97616);
+	box-shadow: 0 0 30px 0 rgba(239, 145, 31, .25)
+}
+.btn:hover{
+	background: linear-gradient(to right, #f9c314, #ff6e07);
+	box-shadow: none;
+}
+.title span{
+	color: #ef911f;
+}
+.header__account{
+	color: #ef911f;
+	border-color: #ef911f;
+}
+.service__item:hover{
+	border-color: #ef911f;
+	box-shadow: 0 4px 40px 0 rgba(239, 181, 3, .2);
+}
+.service__tabs-head svg{
+	fill: #ef911f;
+}
+.cont__info-mail{
+	color: #ef911f;
+}
+.cont__info-mail:hover{
+	color: #F9BF14;
+}
+.footer__link.footer__link--hl{
+	color: #ef911f;
+}
+.footer__link.footer__link--hl:hover{
+	color: #ef911f;
+}
+.header__info-phone:hover{
+	color: #ef911f;
+}
+.header__info-mail:hover{
+	color: #ef911f;
+}
+.accordion__content a{
+	color: #ef911f;
+}
+@media screen and (max-width: 991px){
+	.header__info-phone{
+		color: #ef911f;
+	}
+	.header__connect{
+		box-shadow: none;
+		background: none;
+		color: #ef911f;
+	}
 }
