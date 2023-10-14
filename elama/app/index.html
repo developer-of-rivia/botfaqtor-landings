@@ -117,7 +117,7 @@
 						Пользователей <br>проверили
 					</div>
 				</div>
-				<div class="numbers__item" data-count="39163000">
+				<div class="numbers__item" data-count="39163000" id="count2">
 					<li class="numbers__item-count numbers__item-count--b">
 						<span>0</span>
 					</li>
@@ -379,7 +379,9 @@
 		</div>
 	</div>
 	<!-- calc -->
-	<div class="calc">
+	<!-- calc -->
+	<!-- calc -->
+	<div class="calc calculator">
 		<div class="container2">
 			<div class="calc__wrapper">
 				<div class="calc__left">
@@ -396,103 +398,75 @@
 					</div>
 				</div>
 				<div class="calc__right">
-					<form action="" class="calculator">
-						<div class="calculator__box">
-							<div class="calculator__group calculator__group--hidden">
-								<div class="calculator__item calculator__item--50">
-									<label for="" class="calculator__item-label">Посещаемость в месяц из Google Ads</label>
-									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="google" placeholder="Количество посетителей" value="0">
+					<form action="" class="calc__form">
+						<div class="calc__row">
+							<div class="calc__item">
+								<label>
+									<span>
+										Посещаемость в месяц из Яндекс Директ
+									</span>
+									<input type="text" class="form-control input" name="yandex" placeholder="" value="5000">
 									<div class="text-info error d-none">Поле не может быть пустым</div>
-								</div>
-								<div class="calculator__item calculator__item--50">
-									<label for="" class="calculator__item-label">Средняя цена клика в Google Ads</label>
-									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="pricegoogle" placeholder="Цена клика" value="0">
-									<div class="text-info error d-none">Поле не может быть пустым</div>
-								</div>
+								</label>
 							</div>
-							<div class="calculator__group">
-								<div class="calculator__item calculator__item--50">
-									<label for="" class="calculator__item-label">Посещаемость в месяц из Яндекс Директ</label>
-									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="yandex" placeholder="Количество посетителей" value="5000">
+							<div class="calc__item">
+								<label>
+									<span>
+										Средняя цена клика в Яндекс Директ
+									</span>
+									<input type="text" class="form-control input" name="priceyandex" placeholder="" value="47">
 									<div class="text-info error d-none">Поле не может быть пустым</div>
-								</div>
-								<div class="calculator__item calculator__item--50">
-									<label for="" class="calculator__item-label">Средняя цена клика в Яндекс Директ</label>
-									<input data-input="colors1 bradius1 fontsize1" type="text" class="calculator__item-input form-control" name="priceyandex" placeholder="Цена клика" value="47">
-									<div class="text-info error d-none">Поле не может быть пустым</div>
-								</div>
+								</label>
 							</div>
-							<div class="calculator__group calculator__defselect">
-								<div class="form-control select-css calculator__item calculator__item--100">
-									<label for="" class="calculator__item-label">Тематика сайта</label>
-									<select value="Реклама" class="calculator__item-select" name="theme" id="" data-select="bradius1">
-										<option class="calopt0" value="Выберите тему">Выберите тематику сайта</option>
-										<option class="calopt1" value="Реклама" data="18.4">Реклама</option>
-										<option class="calopt2" value="Услуги" data="21.7">Услуги</option>
-										<option class="calopt3" value="Ecommerce / online retail" data="24.3">Ecommerce / online retail</option>
-										<option class="calopt4" value="Образование" data="14.1">Образование</option>
-										<option class="calopt5" value="Финансы" data="29.9">Финансы</option>
-										<option class="calopt6" value="Юриспруденция" data="19.5">Юриспруденция</option>
-										<option class="calopt7" value="Медицина" data="22.2">Медицина</option>
-										<option class="calopt8" value="Онлайн сервисы" data="23.8">Онлайн сервисы</option>
-										<option class="calopt9" value="Программное обеспечение / IT" data="17.6">Программное обеспечение / IT</option>
-										<option class="calopt10" value="Телеком" data="16.4">Телеком</option>
-										<option class="calopt11" value="Туризм" data="27.2">Туризм</option>
-										<option class="calopt12" value="Недвижимость" data="29.4">Недвижимость</option>
-										<option class="calopt13" value="Авто" data="31.6">Авто</option>
+						</div>
+						<div class="calc__row calc__theme">
+							<div class="calc__item calc__item_full">
+								<label>
+									<span>
+										Тематика сайта
+									</span>
+									<select name="theme" id="">
+										<option value="Выберите тему">Выберите сферу деятельности</option>
+										<option value="Реклама" data="18.4">Реклама</option>
+										<option value="Услуги" data="21.7">Услуги</option>
+										<option value="Ecommerce / online retail" data="24.3">Ecommerce / online retail</option>
+										<option value="Образование" data="14.1">Образование</option>
+										<option value="Финансы" data="29.9">Финансы</option>
+										<option value="Юриспруденция" data="19.5">Юриспруденция</option>
+										<option value="Медицина" data="22.2">Медицина</option>
+										<option value="Онлайн сервисы" data="23.8">Онлайн сервисы</option>
+										<option value="Программное обеспечение / IT" data="17.6">Программное обеспечение / IT</option>
+										<option value="Телеком" data="16.4">Телеком</option>
+										<option value="Туризм" data="27.2">Туризм</option>
+										<option value="Недвижимость" data="29.4">Недвижимость</option>
+										<option value="Авто" data="31.6">Авто</option>
 									</select>
-								</div>
-							</div>
-							<div class="fake-select select">
-								<label for="" class="calculator__item-label" style="margin-bottom: 5px">Тематика сайта</label>
-								<select class="select__item">
-									<option class="fake_calopt0">Выберите тематику сайта</option>
-									<option class="fake_calopt1">Реклама</option>
-									<option class="fake_calopt2">Услуги</option>
-									<option class="fake_calopt3">Ecommerce / online retail</option>
-									<option class="fake_calopt4">Образование</option>
-									<option class="fake_calopt5">Финансы</option>
-									<option class="fake_calopt6">Юриспруденция</option>
-									<option class="fake_calopt7">Медицина</option>
-									<option class="fake_calopt8">Онлайн сервисы</option>
-									<option class="fake_calopt9">Программное обеспечение / IT</option>
-									<option class="fake_calopt10">Телеком</option>
-									<option class="fake_calopt11">Туризм</option>
-									<option class="fake_calopt12">Недвижимость</option>
-									<option class="fake_calopt13">Авто</option>
-								</select>
-							</div>
-							<div class="calculator__group calculator__lost">
-								<div class="result-calc calculator__lost-wrapper">
-									<div class="info-result">
-										<div class="label-text calculator__lost-title">Вы теряете на скликивании: </div>
-										<div class="info-summ calculator__lost-results">
-											<div class="calculator__lost-item">
-												<div class="calculator__lost-name">
-													Ежегодно:
-												</div>
-												<div class="year">
-													<span>705 000</span>₽/год
-												</div>
-											</div>
-											<div class="calculator__lost-item">
-												<div class="calculator__lost-name">
-													Ежемесячно:
-												</div>
-												<div class="month">
-													<span>58 750</span>₽/мес
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								</label>
 							</div>
 						</div>
 					</form>
-					<div class="calc__button-area">
-						<a href="https://botfaqtor.ru/register" class="calc__connect calc__connect--2 btn">
-							Подключить защиту
-						</a>
+					<div class="calc__result">
+						<div class="calc__result-title">
+							Вы теряете на скликивании:
+						</div>
+						<div class="calc__result-numbers">
+							<div class="calc__result-numbers-item">
+								<div class="calc__result-numbers-name">
+									Ежегодно:
+								</div>
+								<div class="calc__result-numbers-num year">
+									<span>1 797 000</span>₽/год
+								</div>
+							</div>
+							<div class="calc__result-numbers-item">
+								<div class="calc__result-numbers-name">
+									Ежемесячно:
+								</div>
+								<div class="calc__result-numbers-num month">
+									<span>149 750</span>₽/мес
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -632,7 +606,9 @@
 	<!-- FOOTER -->
 	<!--#include virtual="../../common/sections/footer/footer.html" -->
 	<!--#include virtual="../../common/sections/footer/footer-scripts.html" -->
-
-	<script src="js/in/main.min.v2.js"></script>
+	<script>
+		wow = new WOW();
+		wow.init();
+	</script>
 </body>
 </html>
