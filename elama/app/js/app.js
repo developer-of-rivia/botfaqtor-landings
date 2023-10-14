@@ -321,4 +321,4 @@ $( document ).ready(function() {
 
 
 
-@import 'common/sections/calc-section/calc-section.js';
+@import 'common/sections/calc-section/calc-section2.js';
