@@ -1,6 +1,5 @@
 // LIBS
 @import 'common/plugins/graph-tabs/script.js';
-@import 'common/sections/calc-section/calc-section.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,13 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		menu.classList.remove('header__panel--open');
 		// scrollLock.enablePageScroll(scrollObject);
 	})
-
-
-	const tabs1 = new GraphTabs('tab', {
-		isChanged: (tabs) => {
-		  console.log(tabs);
-		}
-	});
 
 
 	// dropdown
@@ -85,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	loadMapBlock.classList.contains("_loaded") || getMap();
+
+
+    const tabs1 = new GraphTabs('tab', {
+		isChanged: (tabs) => {
+		  console.log(tabs);
+		}
+	});
 });
 
 
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-$(document).ready(function(){
+$( document ).ready(function() {
 	$(window).on("scroll", (function() {
 		if($(".numbers__box").hasClass("animated") && !$(".numbers__box").hasClass("numEnd")) {
 			$(".numbers__item-count").each((function() {
@@ -318,3 +317,8 @@ $(document).ready(function(){
         }, o
     }()
 }).call(this);
+
+
+
+
+@import 'common/sections/calc-section/calc-section.js';
