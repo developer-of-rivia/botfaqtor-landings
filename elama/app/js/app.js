@@ -1,13 +1,8 @@
-/* libs */
-// import '../../../common/components/jquery/jquery-3.6.4.min.js';
-// import '../../../common/components/scroll-lock/scroll-lock.js';
-import '../../../common/external-scripts/roll-network/roll-network.js';
-
-
+// LIBS
+@import 'common/plugins/graph-tabs/script.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
 	let closeIcon = document.querySelector('.header__toggle-close');
@@ -82,6 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	loadMapBlock.classList.contains("_loaded") || getMap();
+
+
+
+
+
+	const tabs1 = new GraphTabs('tab', {
+		isChanged: (tabs) => {
+		  console.log(tabs);
+		}
+	});
+
 
 
 
