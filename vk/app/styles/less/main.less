@@ -96,6 +96,9 @@
 .main__list p span{
 	font-weight: 600;
 }
+.main__list-icon{
+	min-width: 27px;
+}
 .main__bottom-row{
 	display: flex;
 	align-items: center;
@@ -200,7 +203,7 @@
 	.main {
 		padding-top: 35px;
 		background: url(../images/dist/main-shadow2.png) no-repeat calc(100% + 330px) -270px;
-		padding-bottom: 30px;
+		padding-bottom: 60px;
 	}
 	.main__wrapper {
 		flex-direction: column;
@@ -238,6 +241,12 @@
 	}
 	.main__content{
 		max-width: 50%;
+	}
+	.main__list{
+		align-items: center;
+	}
+	.main__ul{
+		gap: 20px;
 	}
 }
 @media screen and (max-width: 767px){
@@ -288,14 +297,14 @@
 }
 @media screen and (max-width: 480px){
 	.main {
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 	}
 }
 /* adv */
 /* adv */
 /* adv */
 .adv{
-	padding-bottom: 60px;
+	padding: 60px 0;
 }
 .adv__box{
 	display: flex;
@@ -329,13 +338,14 @@
 	color: #111;
 	display: block;
 	margin-bottom: 5px;
+	font-family: 'Inter';
+	font-weight: 500;
 }
 .adv__item-text p{
 	font-weight: 300;
 }
 .adv__item-text a{
 	color: #0085FF;
-	border-bottom: 1px solid #0085FF;
 }
 .adv__item-text a:hover{
 	border-color: transparent;
@@ -360,8 +370,7 @@
 }
 @media screen and (max-width: 991px){
 	.adv{
-		padding-top: 70px;
-		padding-bottom: 100px;
+		padding: 50px 0;
 	}
 	.adv__item{
 		background: none;
@@ -370,10 +379,16 @@
 		text-align: center;
 	}
 	.adv__item-text span{
-		font-size: 18px;
+		font-size: 16px;
+		max-width: 150px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.adv__item-text p{
 		font-size: 14px;
+	}
+	.adv__item-text span{
+		margin-bottom: 10px;
 	}
 }
 @media screen and (max-width: 767px){
@@ -391,8 +406,8 @@
 		text-align: left;
 		flex-grow: 1;
 	}
-	.adv{
-		padding-top: 50px;
+	.adv__item-text span{
+		max-width: 100%;
 	}
 }
 @media screen and (max-width: 574px){
@@ -402,6 +417,9 @@
 	}
 	.adv__item-text{
 		flex-grow: 1;
+	}
+	.adv{
+		padding: 40px 0;
 	}
 }
 /* lets */
@@ -469,12 +487,12 @@
 	}
 }
 
-
-
-
-
-
-
+/**/
+.roll-network_scrollbottom {
+	bottom: 95px !important;
+}
+/* переопределение */
+/* переопределение */
 /* переопределение */
 .btn{
 	background: #0085FF;
@@ -507,84 +525,13 @@
 .price-sub__month span{
 	color: #0085FF;
 }
-
-
-
-
-
-
-
-
-
-
-
-/**/
-.roll-network_scrollbottom {
-	bottom: 95px !important;
-}
-
-/* tooltip */
-.tooltip-trigger {
-    display: inline-block;
-    z-index: 9999999;
-}
-.icon-tooltip {
-    justify-content: center;
-    color: #fff;
-    display: flex;
-    background: #999999;
-    height: 16px;
-    width: 16px;
-    font-size: 12px !important;
-    align-items: center;
-    border-radius: 16px;
-	line-height: 16px;
-}
-.tooltip-content {
-    font-size: 14px;
-    max-width: 320px;
-    min-width: 160px;
-    position: absolute;
-    display: none;
-    padding: 10px 0 0;
-    left: 50%;
-    top: 20px;
-    opacity: 1;
-    transform: translate(-50%, 0);
-    transition: 200ms 100ms opacity, 300ms 100ms transform;
-    z-index: 999999;
-}
-.tooltip-content__arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #fff;
-    position: absolute;
-    top: 5px;
-    left: calc(50% - 5px);
-}
-.tooltip:hover .tooltip-content {
-    display: block;
-}
-.tooltip {
-    position: relative;
-    top: -2px;
-    cursor: pointer;
-}
-.tooltip-content__body {
-    display: block;
-    background: #fff;
-    font-weight: 400;
-    color: #2f383e;
-    max-width: 320px;
-    border-radius: 3px;
-    padding: 15px;
-    box-shadow: 0px 4px 24px rgb(0 0 0 / 15%);
-}
-.table-tariff:hover{
-    z-index: 999;
-}
-.table-tariff.col-table-3.table2p.active + .table-tariff.col-table-3.table2p.active{
-    border-left: none;
+@media screen and (max-width: 991px){
+	.header__connect{
+		box-shadow: none;
+		background: none;
+		color: #0085ff;
+	}
+	.header__info-phone{
+		color: #0085ff;
+	}
 }

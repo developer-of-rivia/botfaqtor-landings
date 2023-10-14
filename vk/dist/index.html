@@ -7,12 +7,12 @@
 	<title>Защита VK Рекламы - BotFaqtor</title>
     <meta name="description" content="">
     <link rel="icon" type="image/x-icon" href="https://botfaqtor.ru/favicon.ico">
-    <meta property="og:url" content="https://botfaqtor.ru/captcha/" />
+    <meta property="og:url" content="https://botfaqtor.ru/vk-clickfraud/" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Комплексная система кибербезопасности Ботфактор. Защита от ботов и скликивания в VK Рекламе" />
     <meta property="og:description" content="Защита рекламных кампаний от фродовых конверсий в VK Рекламе" />
     <meta property="og:image" content="ogg-preview.jpg" />
-	<link rel="stylesheet" href="css/app.min.99133516.css">
+	<link rel="stylesheet" href="css/app.min.914115335.css">
 
 
 <!-- jQuery -->
@@ -73,6 +73,11 @@
 (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","6xjqkkgg");
 </script>
 <!-- calltouch -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<!-- Plugin metrika -->
@@ -162,7 +167,7 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="header__info">
+			<div class="header__info header__info_desktop">
 				<a href="mailto:info@botfaqtor.ru" class="header__info-mail">
 					info@botfaqtor.ru
 				</a>
@@ -182,6 +187,14 @@
 					</a>
 				</div>
 			</div>
+		</div>
+		<div class="header__info header__info_mobile">
+			<a href="mailto:info@botfaqtor.ru" class="header__info-mail">
+				info@botfaqtor.ru
+			</a>
+			<a href="tel:74959466031" class="header__info-phone">
+				+7 (495) 946-6031
+			</a>
 		</div>
 		<div class="header__toggle">
 			<div class="header__toggle-burger">
@@ -221,19 +234,25 @@
 						</div>
 						<ul class="main__ul">
 							<li class="main__list">
-								<img src="images/dist/main-list-icon.svg">
+								<div class="main__list-icon">
+									<img src="images/dist/main-list-icon.svg">
+								</div>
 								<p>
 									Блокируем скликивания и фрод в VK Рекламе.
 								</p>
 							</li>
 							<li class="main__list">
-								<img src="images/dist/main-list-icon2.svg">
+								<div class="main__list-icon">
+									<img src="images/dist/main-list-icon2.svg">
+								</div>
 								<p>
 									Увеличиваем конверсию и снижаем стоимость лида до 35%.
 								</p>
 							</li>
 							<li class="main__list">
-								<img src="images/dist/main-list-icon3.svg">
+								<div class="main__list-icon">
+									<img src="images/dist/main-list-icon3.svg">
+								</div>
 								<p>
 									Автоматическое отключение рекламы для > 2 млн ботов.
 								</p>
@@ -498,8 +517,8 @@
                 <div class="service__item-text">
                     Для ботов и скликивателей обнаруженных на вашем сайте, скрывает показ вашей рекламы в Яндекс Директ, а также для  >40 млн ботов обнаруженных на сайтах подключенных к сервису.
                 </div>
-                <a href="https://botfaqtor.ru/blog/docs/how_it_works_yandex/" target="_blank" class="service__item-link">
-                    Как работает?
+                <a href="https://botfaqtor.ru/yandex-clickfraud/" target="_blank" class="service__item-link">
+                    Подробнее
                 </a>
             </div>
             <div class="service__item">
@@ -517,8 +536,8 @@
                 <div class="service__item-text">
                     Для ботов и скликивателей обнаруженных на вашем сайте, скрывает показ вашей рекламы в Google Рекламе, а также для  >10 млн ботов обнаруженных на сайтах подключенных к сервису.
                 </div>
-                <a href="https://botfaqtor.ru/blog/docs/how_it_works_google/" target="_blank" class="service__item-link">
-                    Как работает?
+                <a href="https://botfaqtor.ru/google-clickfraud/" target="_blank" class="service__item-link">
+                    Подробнее
                 </a>
             </div>
             <div class="service__item">
@@ -536,8 +555,8 @@
                 <div class="service__item-text">
                     Анализирует весь трафик на сайте и блокирует заход ботов на ваш сайт. Возможно гибко настроить блокировку ботов по: посадочным страницам, гео, источникам и т.д.
                 </div>
-                <a href="https://botfaqtor.ru/blog/docs/how_it_works_antibot/" target="_blank" class="service__item-link">
-                    Как работает?
+                <a href="https://botfaqtor.ru/sites-antibot/" target="_blank" class="service__item-link">
+                    Подробнее
                 </a>
             </div>
             <div class="service__item service__item_md100">
@@ -555,8 +574,8 @@
                 <div class="service__item-text">
                     Боты могут нажимать на кнопки, заполнять разные формы на сайте и оставлять фейковые заказы, что приводит к искажению реальной статистики сайта. Данный инструмент позволяет защитить любые формы от ботов на вашем сайте.
                 </div>
-                <a href="https://botfaqtor.ru/blog/docs/how_it_works_captcha/" target="_blank" class="service__item-link">
-                    Как работает?
+                <a href="https://botfaqtor.ru/captcha/" target="_blank" class="service__item-link">
+                    Подробнее
                 </a>
                 <!-- <div class="service__item-soon">
                     Скоро
@@ -577,12 +596,12 @@
                 <div class="service__item-text">
                     Первая система защиты от ботов в VK Реклама. Анализирует весь трафик вашего сайта, сообщейства ВКонтакте, каталога товаров и лид-форм. Cкрывает показ рекламы ботам в VK Рекламе. База ботов - 1 млн.
                 </div>
-                <!-- <a href="https://botfaqtor.ru/blog/docs/how_it_works_google/" target="_blank" class="service__item-link">
-                    Как работает?
-                </a> -->
-                <div class="service__item-soon">
+                <a href="https://botfaqtor.ru/vk-clickfraud/" target="_blank" class="service__item-link">
+                    Подробнее
+                </a>
+                <!-- <div class="service__item-soon">
                     Скоро
-                </div>
+                </div> -->
             </div>
             <div class="service__item">
                 <div class="service__item-brand service__item-brand_mytarget">
@@ -1634,7 +1653,7 @@
 	
 
 
-<script src="js/app.min.99133516.js"></script>
+<script src="js/app.min.914115335.js"></script>
 
 
 
