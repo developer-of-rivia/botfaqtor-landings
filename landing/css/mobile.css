@@ -1,0 +1,460 @@
+@media (max-width:1200px) {
+    section {
+        width: 100%
+    }
+
+    .how-calls-screen .ul-list ul li span {
+        font-size: 16px;
+        width: 100%
+    }
+
+    section.clique-screen .clique-info {
+        width: 90%
+    }
+
+}
+
+@media (max-width:1100px) {
+    h2 {
+        font-size: 36px !important;
+        line-height: 40px
+    }
+
+    .who-calls-screen p {
+        width: 90%
+    }
+
+    section.first-screen {
+        height: auto;
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    section.first-screen .tableCell {
+        height: auto
+    }
+
+    section.first-screen h1,
+    section.first-screen h3 {
+        width: 50%;
+    }
+
+    section.first-screen .btn {
+        margin-top: 30px
+    }
+
+    .price .btn {
+        display: block;
+        padding: 17.5px 0;
+        white-space: initial;
+        line-height: 22px;
+        width: 100%
+    }
+
+    .news .newsBlock,
+    .news img {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding-left: 0
+    }
+
+    .calc .project {
+        width: 100%
+    }
+
+    .calc .sum .col-6 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+
+    .calc .sum.active {
+        height: 405px
+    }
+
+    .calc .project .item {
+        width: calc(50% - 10px);
+        margin: 5px
+    }
+
+    .calc .project .item::before {
+        display: none
+    }
+
+    .widget-container table thead th span {
+        display: none
+    }
+
+    th.s-n::before {
+        content: attr(data-title);
+        display: inline
+    }
+}
+
+@media (max-width:930px) {
+    .banner-w100 .banner50 {
+        display: block;
+    }
+
+    .banner-w100 .banner100 {
+        display: none;
+    }
+
+    .text-labl {
+        max-width: 154px;
+        display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden
+    }
+
+    section.clique-screen .col-6:first-child {
+        padding: 40px 0
+    }
+
+    .clique-screen .col-6 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 0
+    }
+
+    section.clique-screen .col-6:first-child::after {
+        left: -100%;
+        width: 200%
+    }
+
+    section.clique-screen .clique-info {
+        margin: 0 auto 0 auto;
+        width: 435px
+    }
+
+    .news .col-6,
+    .who-calls-screen .col-3 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px
+    }
+
+    .who-calls-screen .col-3:last-child {
+        margin-bottom: 0
+    }
+
+    .news .col-6 {
+        padding-bottom: 0;
+        margin-bottom: 40px
+    }
+
+    .news .col-6:last-child {
+        margin-bottom: 0
+    }
+
+    section.clique-screen .col-6 p:last-child {
+        margin-bottom: 0
+    }
+
+    section.clique-screen .clique {
+        width: 435px;
+        margin: 0 auto 40px auto
+    }
+
+ 
+}
+
+@media (max-width:800px) {
+
+    .table-tariff thead tr:nth-child(2) th,
+    .table-tariff .proj-name span {
+        font-size: 14px;
+    }
+
+    .table1p {
+        width: 35% !important;
+    }
+
+    .table2p {
+        width: 22.5% !important;
+    }
+
+    .table-tariff .title,
+    .table1p tr:first-child th:first-child,
+    .table-tariff .price {
+        font-size: 20px;
+    }
+
+    table tr td,
+    table tr th {
+        width: 53px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 42px
+    }
+
+    h3 {
+        font-size: 20px
+    }
+
+    .who-calls-screen,
+    section.clique-screen {
+        margin: 60px 0 0 0
+    }
+
+    section.clique-screen h2 {
+        padding-bottom: 60px
+    }
+
+    .who-calls-screen h2 {
+        padding-bottom: 80px
+    }
+
+    .price h2,
+    .project-screen h2 {
+        padding: 60px 0
+    }
+
+    .calc .sum fieldset .tablCell:first-child {
+        width: 70%
+    }
+
+    .calc .sum fieldset .tablCell:last-child {
+        width: 30%
+    }
+
+    .price .btn {
+        font-size: 14px;
+        text-indent: -9999px;
+        padding: 5px;
+    }
+
+    .table-tariff:nth-child(2) .btn::after {
+        content: " Попробовать ";
+    }
+
+    .table-tariff .btn::after {
+        content: " Купить ";
+        font-size: 14px;
+        display: block;
+        text-indent: 0;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 27px;
+        margin-top: -21px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:730px) {
+
+    .SourcesCheck {
+        display: none
+    }
+
+    .roll-network .message-list {
+        display: none;
+    }
+
+    .case-block .col-3 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:630px) {
+    .partner {
+        height: 550px;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .text-labl {
+        max-width: 90px
+    }
+
+    .calc .sum.active {
+        height: 425px
+    }
+
+    .calc .project .item {
+        width: 100%
+    }
+
+    section.first-screen h1,
+    section.first-screen h3 {
+        width: 80%
+    }
+
+    section.contact .block-contact {
+        position: static;
+        top: initial;
+        left: initial;
+        width: 100%;
+        -webkit-box-shadow: none;
+        box-shadow: none
+    }
+
+    section.clique-screen .clique .num span {
+        font-size: 20px
+    }
+
+    section.clique-screen .clique .num {
+        padding-left: 15px
+    }
+
+    section.clique-screen .clique .num div {
+        font-size: 36px
+    }
+
+    section.clique-screen .clique,
+    section.clique-screen .clique-info {
+        width: 310px
+    }
+
+    section.clique-screen .clique {
+        margin: 0 auto 20px auto
+    }
+
+    .project-screen .content,
+    .project-screen .log-ico {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .project-screen h3 {
+        width: 100%
+    }
+
+    .project-screen .log-ico img {
+        width: 40%;
+        margin: 20px auto;
+        display: block
+    }
+
+    .contact-head a.phone {
+        font-size: 14px
+    }
+
+    .contact-head a.mail {
+        text-align: right;
+        margin-bottom: 7px
+    }
+
+    .project-bar {
+        left: -50px;
+        width: 390px
+    }
+
+    .project-bar::before {
+        left: 60px
+    }
+
+    .calc .sum.active {
+        height: 532px
+    }
+
+    .table-tariff .proj-name span {
+        display: none
+    }
+
+    .table1p {
+        display: none
+    }
+
+    .table2p,
+    .table3p {
+        width: 33.333% !important
+    }
+
+    .table-tariff tbody tr:nth-child(5) td.ant::before {
+        background: url(../img/ico-project/ico-shortlink-dir.svg);
+        width: 24px;
+        height: 20px
+    }
+
+    .table-tariff.col-table-3 tr td {
+        height: 60px
+    }
+
+    .calc .calcu.active {
+        height: 186px
+    }
+
+    .calc .sum fieldset .tablCell:first-child,
+    .calc .sum fieldset .tablCell:last-child {
+        width: 50%
+    }
+
+    .calc .sum fieldset .tabl {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f5f5f5
+    }
+
+
+}
+
+@media (max-width:580px) {
+    .text-labl {
+        max-width: 30px
+    }
+}
+
+@media (max-width:470px) {
+    .calc .sum.active {
+        height: 545px
+    }
+}
+
+@media (max-width:400px) {
+    section.first-screen h1,
+    section.first-screen h3 {
+        width: 90%
+    }
+
+    .calc .sum.active {
+        height: 540px
+    }
+
+    .calc .sum.active {
+        height: 593px
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+}
+
+@media (max-width:370px) {
+    .table-tariff td,
+    .table-tariff th {
+        word-break: break-all
+    }
+
+    .calc .sum.active {
+        height: 618px
+    }
+}
+
+@media (min-width:2000px) {
+    section {
+        background-size: cover
+    }
+}

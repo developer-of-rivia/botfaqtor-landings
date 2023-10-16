@@ -1,0 +1,201 @@
+@media (max-width: 1500px) {
+
+    .botfaq-dir .click-project::before {
+        content: "";
+        background-image: url(/landing/img/nav-project.svg);
+        height: 23.25px;
+        width: 27px;
+        display: block;
+        float: left;
+    }
+
+    header .project-title span {
+        display: none;
+    }
+
+    header .project-title span.ico-down-arr {
+        display: block;
+    }
+
+    .wrapper {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width:1300px) {
+    header .menu-burger {
+        display: block;
+    }
+
+    .menu-head {
+        display: none
+    }
+
+    footer .foot-line,
+    footer .links ul li a {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 930px) {
+    header .logo a {
+        width: 43px;
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    footer .links .col-4 {
+        -ms-flex: 0 0 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    header .wrapper {
+        width: 100% !important;
+        padding: 0 15px;
+    }
+
+    header .logo {
+        padding-right: 10px;
+    }
+
+    header .project-title .click-project {
+        padding: 13px 10px !important;
+    }
+
+    .contact-head {
+        text-align: right;
+        margin: 6px 10px 6px 0 !important;
+    }
+
+    header .menu-burger {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 570px) {
+    header .login .btn {
+        padding: 10.5px 10px;
+    }
+
+    header .login .btn span {
+        display: none;
+    }
+
+    header .login .btn::after {
+        content: "";
+        background: url(../img/user.svg);
+        height: 17px;
+        width: 15px;
+        display: block;
+    }
+
+    h2 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+}
+
+@media (max-width: 410px) {
+
+    footer .links ul li strong{
+        font-size: 16px;
+    }
+
+    header .project-title span {
+        font-size: 14px !important;
+    }
+
+    header .project-bar {
+        width: 295px !important;
+        left: -50px;
+    }
+
+    header .project-bar::before {
+        left: 65px;
+    }
+
+    header .logo {
+        margin-top: 8px;
+        padding-right: 5px;
+    }
+
+    header .logo a {
+        width: 30px;
+        height: 33px;
+    }
+
+    footer .links {
+        padding: 0px 0;
+    }
+
+    .price .table-tariffs-flex {
+        display: block;
+    }
+
+    .price .table2p,
+    .price .table3p {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    header .contact-head a.phone {
+        font-size: 14px !important;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    header .project-title span {
+        margin-left: 5px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    header .contact-head a.phone {
+        font-size: 12px !important;
+    }
+
+    header .login .btn {
+        padding: 7.5px 7px;
+    }
+
+    .contact-head {
+        text-align: right;
+        margin: 0px 5px 0px 0 !important;
+    }
+
+    header .project-title .click-project {
+        padding: 0px 6px !important;
+    }
+
+    header .logo {
+        margin-top: 0px;
+    }
+
+    header .logo a {
+        width: 25px;
+        height: 28px;
+    }
+
+    .nav-menu .close {
+        top: 75px;
+    }
+
+    .nav-menu nav ul {
+        list-style: none;
+        padding: 15px;
+    }
+}
