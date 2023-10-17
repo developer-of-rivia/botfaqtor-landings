@@ -31,11 +31,28 @@ import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import {deleteAsync} from 'del'
 
+
+
+// function browsersync() {
+// 	browserSync.init({
+// 		server: {
+// 			baseDir: `${folderName}/app/`,
+// 			middleware: bssi({ baseDir: `${folderName}/app/`, ext: '.html' }),
+// 		},
+// 		ghostMode: { clicks: false },
+// 		notify: false,
+// 		online: true,
+// 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
+// 	})
+// }
+
+
+
 function browsersync() {
 	browserSync.init({
 		server: {
-			baseDir: `${folderName}/app/`,
-			middleware: bssi({ baseDir: `${folderName}/app/`, ext: '.html' }),
+			baseDir: '.',
+			middleware: bssi({ baseDir: '.', ext: '.html' }),
 		},
 		ghostMode: { clicks: false },
 		notify: false,
@@ -43,6 +60,9 @@ function browsersync() {
 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
+
+
+
 
 // function scripts() {
 // 	return src([`${folderName}/app/js/*.js`, `!${folderName}/app/js/*.min.js`])
