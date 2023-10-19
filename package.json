@@ -38,6 +38,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^3.0.1",
+		"gulp-webp": "^4.0.1",
 		"postcss": "^8.4.30",
 		"sass": "^1.68.0",
 		"terser-webpack-plugin": "^5.3.9",

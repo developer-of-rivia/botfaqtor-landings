@@ -22,6 +22,7 @@ import less          from 'gulp-less'
 import lessglob      from 'gulp-less-glob'
 import styl          from 'gulp-stylus'
 import stylglob      from 'gulp-noop'
+import webpConv		 from 'gulp-webp'
 import postCss       from 'gulp-postcss'
 import cssnano       from 'cssnano'
 import autoprefixer  from 'autoprefixer'
@@ -132,6 +133,19 @@ function images() {
 		.pipe(dest(`${folderName}/app/images/dist`))
 		.pipe(browserSync.stream())
 }
+
+// webp
+// gulp.task('webp', function (done) {
+// 	return gulp.src('app/img/dist/*.+(png|jpg|jpeg)')
+// 		.pipe(plumber())
+// 		.pipe(changed('app/img/dist', {
+// 		  extension: '.webp'
+// 		}))
+// 		.pipe(webpConv())
+// 		.pipe(multiDest(['app/img/src', 'app/img/dist']))
+// })
+
+
 
 function buildcopy() {
 	return src([
