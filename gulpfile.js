@@ -1,4 +1,4 @@
-let folderName = 'antibot';
+let folderName = 'tarif-unlimited';
 
 let preprocessor = 'less', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
 	fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
@@ -22,6 +22,7 @@ import less          from 'gulp-less'
 import lessglob      from 'gulp-less-glob'
 import styl          from 'gulp-stylus'
 import stylglob      from 'gulp-noop'
+import newer 		 from 'gulp-newer';
 import webpConv		 from 'gulp-webp'
 import postCss       from 'gulp-postcss'
 import cssnano       from 'cssnano'
@@ -126,10 +127,17 @@ function styles() {
 		.pipe(browserSync.stream())
 }
 
+
+// var imgSrc = `${folderName}/app/images/src/**/*`;
+// var imgDest = `${folderName}/app/images/dist/**/*`;
+
+
 function images() {
 	return src([`${folderName}/app/images/src/**/*`])
 		.pipe(changed(`${folderName}/app/images/dist`))
 		.pipe(imagemin())
+		.pipe(dest(`${folderName}/app/images/dist`))
+		.pipe(webpConv())
 		.pipe(dest(`${folderName}/app/images/dist`))
 		.pipe(browserSync.stream())
 }
