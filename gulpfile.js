@@ -133,7 +133,7 @@ function styles() {
 function images() {
 	return src([`${folderName}/app/images/src/**/*`])
 		.pipe(changed(`${folderName}/app/images/dist`))
-		.pipe(imagemin())
+		// .pipe(imagemin())
 		.pipe(dest(`${folderName}/app/images/dist`))
 		.pipe(webpConv())
 		.pipe(dest(`${folderName}/app/images/dist`))
