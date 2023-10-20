@@ -64,8 +64,6 @@ function browsersync() {
 }
 
 
-
-
 // function scripts() {
 // 	return src([`${folderName}/app/js/*.js`, `!${folderName}/app/js/*.min.js`])
 // 		.pipe(webpackStream({
