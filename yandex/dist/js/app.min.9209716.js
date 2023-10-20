@@ -363,6 +363,8 @@ $(".calculator input").keyup(function () {
 });
 
 
+
+
 $(".calculator select").change(function(){
     var yandex = $("[name='yandex']").val().replace(/\s/g, '');
     var google = $("[name='google']").val().replace(/\s/g, '');
