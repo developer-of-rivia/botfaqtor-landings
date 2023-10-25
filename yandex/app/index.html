@@ -110,7 +110,29 @@
 				</div>
 				<div class="main__right">
 					<img src="images/dist/main/main-video-thumb.svg">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/2Z-uU-ncgBA?si=0t4aGPluDeRizti8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<!-- <div class="yt-lazy">
+						<iframe class="yt-lazy__iframe"
+								data-src="https://www.youtube.com/embed/2Z-uU-ncgBA?si=0t4aGPluDeRizti8"
+								style="background-image: url(https://i.ytimg.com/vi/2Z-uU-ncgBA/maxresdefault.jpg);"
+								width="560"
+								height="315"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen>
+						</iframe>
+					</div> -->
+					<!-- <iframe class="yt-lazy__iframe"
+							src="https://www.youtube.com/embed/2Z-uU-ncgBA?si=0t4aGPluDeRizti8"
+							srcdoc="<a href=//www.youtube.com/embed/Y8Wp3dafaMQ><img src=//i3.ytimg.com/vi/Y8Wp3dafaMQ/hqdefault.jpg></a>"
+							width="560"
+							height="315"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen>
+					</iframe> -->
+					<iframe width="560" height="315" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href='https://www.youtube.com/embed/jg9MX2w7Ebw?autoplay=1&mute=1'><img src='http://localhost/img/youtube.jpg' alt='Я не использую куки'></a>" title="Я не использую куки" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -313,7 +335,7 @@
 								</div>
 							</div>
 							<div class="prot__right">
-								<img src="images/dist/prot/prot-img2.png" class="prot__img_blue">
+								<img data-src="images/dist/prot/prot-img2.png" class="lazyload prot__img_blue">
 							</div>
 						</div>
 					</div>
@@ -335,7 +357,7 @@
 								</div>
 							</div>
 							<div class="prot__right">
-								<img src="images/dist/prot/prot-img1.png" class="prot__img_green">
+								<img data-src="images/dist/prot/prot-img1.png" class="lazyload prot__img_green">
 							</div>
 						</div>
 					</div>
@@ -369,7 +391,7 @@
 								</div>
 							</div>
 							<div class="prot__right">
-								<img src="images/dist/prot/prot-img3.png" class="prot__img_red">
+								<img data-src="images/dist/prot/prot-img3.png" class="lazyload prot__img_red">
 							</div>
 						</div>
 					</div>
@@ -411,7 +433,7 @@
 								</div>
 							</div>
 							<div class="prot__right">
-								<img src="images/dist/prot/prot-img4.png" class="prot__img_green">
+								<img data-src="images/dist/prot/prot-img4.png" class="lazyload prot__img_green">
 							</div>
 						</div>
 					</div>
@@ -531,12 +553,12 @@
 					</a>
 				</div>
 				<div class="why__image">
-					<img src="images/dist/why/why-img1.svg">
+					<img data-src="images/dist/why/why-img1.svg" class="lazyload">
 				</div>
 			</div>
 			<div class="why__item why__item_reverse">
 				<div class="why__image">
-					<img src="images/dist/why/why-img2.svg">
+					<img data-src="images/dist/why/why-img2.svg" class="lazyload">
 				</div>
 				<div class="why__item-content">
 					<div class="why__item-title">
@@ -583,12 +605,12 @@
 					</a>
 				</div>
 				<div class="why__image">
-					<img src="images/dist/why/why-img3.svg">
+					<img data-src="images/dist/why/why-img3.svg" class="lazyload">
 				</div>
 			</div>
 			<div class="why__item why__item_reverse">
 				<div class="why__image">
-					<img src="images/dist/why/why-img4.svg">
+					<img data-src="images/dist/why/why-img4.svg" class="lazyload">
 				</div>
 				<div class="why__item-content">
 					<div class="why__item-title">
@@ -635,12 +657,12 @@
 					</a>
 				</div>
 				<div class="why__image">
-					<img src="images/dist/why/why-img5.svg">
+					<img data-src="images/dist/why/why-img5.svg" class="lazyload">
 				</div>
 			</div>
 			<div class="why__item why__item_reverse">
 				<div class="why__image">
-					<img src="images/dist/why/why-img6.png">
+					<img data-src="images/dist/why/why-img6.png" class="lazyload">
 				</div>
 				<div class="why__item-content">
 					<div class="why__item-title">
@@ -687,12 +709,12 @@
 					</a>
 				</div>
 				<div class="why__image">
-					<img src="images/dist/why/why-img7.svg">
+					<img data-src="images/dist/why/why-img7.svg" class="lazyload">
 				</div>
 			</div>
 			<div class="why__item why__item_reverse">
 				<div class="why__image">
-					<img src="images/dist/why/why-img8.svg">
+					<img data-src="images/dist/why/why-img8.svg" class="lazyload">
 				</div>
 				<div class="why__item-content">
 					<div class="why__item-title">
@@ -736,7 +758,7 @@
 					</div>
 				</div>
 				<div class="why__image">
-					<img src="images/dist/why/why-img9.svg">
+					<img data-src="images/dist/why/why-img9.svg" class="lazyload">
 				</div>
 			</div>
 		</div>

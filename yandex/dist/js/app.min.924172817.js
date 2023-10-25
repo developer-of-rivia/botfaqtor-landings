@@ -124,7 +124,6 @@ class GraphTabs {
 
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
@@ -216,6 +215,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		  console.log(tabs);
 		}
 	});
+
+
+
+	let youtubeVideo = document.querySelector('.yt-lazy');
+let youtubeLink = youtubeVideo.getAttribute('data-src');
+
+
+console.log(youtubeLink);
+
+
+
+youtubeVideo.addEventListener('click', function(){
+
+});
+
+;
 
 
 	// graphmodal

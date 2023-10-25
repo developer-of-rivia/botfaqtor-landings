@@ -1,4 +1,4 @@
-let folderName = 'elama';
+let folderName = 'google';
 
 let preprocessor = 'less', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
 	fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
@@ -135,7 +135,7 @@ function images() {
 		.pipe(changed(`${folderName}/app/images/dist`))
 		// .pipe(imagemin())
 		.pipe(dest(`${folderName}/app/images/dist`))
-		.pipe(webpConv())
+		.pipe(webpConv({quality: 100}))
 		.pipe(dest(`${folderName}/app/images/dist`))
 		.pipe(browserSync.stream())
 }

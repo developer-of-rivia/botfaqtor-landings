@@ -3,7 +3,6 @@
 
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
@@ -95,6 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		  console.log(tabs);
 		}
 	});
+
+
+
+	@import 'common/plugins/yt-lazy/yt-lazy.js';
 
 
 	// graphmodal
