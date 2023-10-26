@@ -265,6 +265,6 @@ function startwatch() {
 
 export { scripts, styles, images, deploy }
 export let assets = series(scripts, styles, images)
-export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml, cssFileVersion, jsFileVersion, filesVersionHtml, deleteOldCss, deleteOldJs, criticalCssInject)
+export let build = series(cleandist, images, scripts, styles, criticalCss, buildcopy, buildhtml, cssFileVersion, jsFileVersion, filesVersionHtml, deleteOldCss, deleteOldJs, criticalCssInject)
 
 export default series(scripts, styles, images, parallel(browsersync, startwatch))
