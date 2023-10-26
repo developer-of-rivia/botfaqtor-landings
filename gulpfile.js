@@ -14,7 +14,8 @@ import webpackStream from 'webpack-stream'
 import webpack       from 'webpack'
 import TerserPlugin  from 'terser-webpack-plugin'
 import gulpSass      from 'gulp-sass'
-import htmlreplace from 'gulp-html-replace'
+import htmlreplace 	 from 'gulp-html-replace'
+import replace		 from 'gulp-replace'
 import dartSass      from 'sass'
 import sassglob      from 'gulp-sass-glob'
 const  sass          = gulpSass(dartSass)
@@ -32,6 +33,7 @@ import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import {deleteAsync} from 'del'
+import fs			 from 'fs'
 
 
 
@@ -47,9 +49,6 @@ import {deleteAsync} from 'del'
 // 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 // 	})
 // }
-
-
-
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -113,7 +112,7 @@ function scripts() {
 }
 
 function styles() {
-	return src([`${folderName}/app/styles/${preprocessor}/*.*`, `!${folderName}/app/styles/${preprocessor}/_*.*`])
+	return src([`${folderName}/app/styles/${preprocessor}/*.*`, `!${folderName}/app/styles/${preprocessor}/_*.*`, `!${folderName}/app/styles/${preprocessor}/critical.${preprocessor}`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)({ 'include css': true }))
 		.pipe(postCss([
@@ -125,9 +124,34 @@ function styles() {
 		.pipe(browserSync.stream())
 }
 
+function criticalCss() {
+	return src([`${folderName}/app/styles/${preprocessor}/critical.${preprocessor}`])
+		.pipe(eval(`${preprocessor}glob`)())
+		.pipe(eval(preprocessor)({ 'include css': true }))
+		.pipe(postCss([
+			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+		]))
+		.pipe(dest(`${folderName}/app/css`))
+		.pipe(browserSync.stream())
+}
 
-// var imgSrc = `${folderName}/app/images/src/**/*`;
-// var imgDest = `${folderName}/app/images/dist/**/*`;
+function criticalCssInject(){
+	return src(`${folderName}/dist/index.html`)
+	.pipe(replace(/<link rel="stylesheet" href="css\/critical.css">/g, function() {
+		var style = fs.readFileSync(`${folderName}/dist/css/critical.css`, 'utf8');
+		return '<style>\n' + style + '\n</style>';
+	}))
+	.pipe(dest(`${folderName}/dist`));
+}
+
+// function criticalCssInject(){
+// 	return src(`${folderName}/dist/index.html`)
+// 	.pipe(replace(/<link rel="stylesheet" href="css\/critical.css">/, function(s) {
+// 		var style = fs.readFileSync(`${folderName}/dist/css/critical.css`, 'utf8');
+// 		return '<style>\n' + style + '\n</style>';
+// 	}))
+// 	.pipe(dest(`${folderName}/dist`));
+// }
 
 
 function images() {
@@ -140,22 +164,10 @@ function images() {
 		.pipe(browserSync.stream())
 }
 
-// webp
-// gulp.task('webp', function (done) {
-// 	return gulp.src('app/img/dist/*.+(png|jpg|jpeg)')
-// 		.pipe(plumber())
-// 		.pipe(changed('app/img/dist', {
-// 		  extension: '.webp'
-// 		}))
-// 		.pipe(webpConv())
-// 		.pipe(multiDest(['app/img/src', 'app/img/dist']))
-// })
-
-
-
 function buildcopy() {
 	return src([
 		`{${folderName}/app/js,${folderName}/app/css}/*.min.*`,
+		`${folderName}/app/css/critical.css`,
 		`${folderName}/app/images/**/*.*`,
 		`!${folderName}/app/images/src/**/*`,
 		`${folderName}/app/fonts/**/*`
@@ -245,7 +257,7 @@ function deploy() {
 }
 
 function startwatch() {
-	watch(`${folderName}/app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
+	watch(`${folderName}/app/styles/${preprocessor}/**/*`, { usePolling: true }, parallel(styles, criticalCss))
 	watch([`${folderName}/app/js/**/*.js`, `!${folderName}/app/js/**/*.min.js`], { usePolling: true }, scripts)
 	watch(`${folderName}/app/images/src/**/*`, { usePolling: true }, images)
 	watch(`${folderName}/app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
@@ -253,6 +265,6 @@ function startwatch() {
 
 export { scripts, styles, images, deploy }
 export let assets = series(scripts, styles, images)
-export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml, cssFileVersion, jsFileVersion, filesVersionHtml, deleteOldCss, deleteOldJs)
+export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml, cssFileVersion, jsFileVersion, filesVersionHtml, deleteOldCss, deleteOldJs, criticalCssInject)
 
 export default series(scripts, styles, images, parallel(browsersync, startwatch))
