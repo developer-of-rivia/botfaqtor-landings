@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-
+	
 
 	// lazymap
 	function lazyScroll() {
@@ -75,41 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	loadMapBlock.classList.contains("_loaded") || getMap();
 
 
-	// graphmodal
-	// let $modalScroll = document.querySelector('.graph-modal');
-	// const modal = new GraphModal({
-	// 	isOpen: (modal) => {
-	// 		scrollLock.disablePageScroll($modalScroll);
-	// 	},
-	// 	isClose: () => {
-	// 		scrollLock.enablePageScroll($modalScroll);
-	// 	}
-	// });
-
-	// $('.vacancy__button').on('click', function(){
-	// 	$('.tyformail-modal').removeClass('graph-modal-open fadeInUp animate-open');
-	// })
-
-	// vlist
-	// let vlistContent = document.querySelectorAll('.vlist__content');
-
-	// vlistContent.forEach(vlistContent => {
-
-	// 	let vlistText = vlistContent.querySelector('.vlist__text');
-	// 	let vlistShowmore = vlistContent.querySelector('.vlist__showmore');
-	// 	let vlistSalary = vlistContent.querySelector('.vlist__salary');
-
-	// 	vlistShowmore.addEventListener('click', function() {
-	// 		vlistText.classList.toggle('vlist__text_expand');
-	// 		vlistSalary.classList.toggle('vlist__salary_open');
-
-	// 		if(vlistShowmore.innerText == 'Показать описание полностью'){
-	// 			vlistShowmore.innerText = 'Скрыть описание';
-	// 		}
-	// 		else if(vlistShowmore.innerText == 'Скрыть описание'){
-	// 			vlistShowmore.innerText = 'Показать описание полностью';
-	// 		}
-	// 	});
-	// });
-
+	@import 'common/sections/roll-network/roll-network.js';
 })

@@ -1,3 +1,4 @@
+// roll-network
 let icoRollNetwork = document.querySelector('.ico-roll-network');
 let blockRoll = document.querySelector('.block-roll');
 let messageList = document.querySelector('.message-list');
@@ -36,3 +37,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 });
+
+
+// Begin Verbox {literal}
+(function (d, w, m) {
+    window.supportAPIMethod = m;
+    var s = d.createElement("script");
+    s.type = "text/javascript";
+    s.id = "supportScript";
+    s.charset = "utf-8";
+    s.async = true;
+    var id = "fa8d6ba2fa033b89a545e3d9db332dae";
+    s.src = "https://admin.verbox.ru/support/support.js?h=" + id;
+    var sc = d.getElementsByTagName("script")[0];
+    w[m] =
+        w[m] ||
+        function () {
+            (w[m].q = w[m].q || []).push(arguments);
+        };
+    if (sc) sc.parentNode.insertBefore(s, sc);
+    else d.documentElement.firstChild.appendChild(s);
+})(document, window, "Verbox");
+// {/literal} End Verbox
