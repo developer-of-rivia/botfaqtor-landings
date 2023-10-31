@@ -88,4 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		  console.log(tabs);
 		}
 	});
+
+
+	@import 'common/sections/roll-network/roll-network.js';
 })
