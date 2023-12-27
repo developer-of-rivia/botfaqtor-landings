@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	loadMapBlock.classList.contains("_loaded") || getMap();
+
+	@import 'common/sections/roll-network/roll-network.js';
 })
 // slider
 // slider

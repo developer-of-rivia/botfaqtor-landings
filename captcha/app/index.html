@@ -2,8 +2,14 @@
 <html lang="ru">
 
 <head>
-	<!--#include virtual="../../common/sections/header/head-scripts.html" -->
-	<!-- Site info -->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MPMC72V');
+	</script>
+	<!-- End Google Tag Manager -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Умная капча - защита от фродовых конверсий - Botfaqtor | Ботфактор</title>
@@ -13,8 +19,10 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Комплексная система кибербезопасности Ботфактор. Защита от ботов и скликивания с помощью Умной капчи" />
     <meta property="og:description" content="Защита рекламных кампаний от фродовых конверсий с использованием умной капчи." />
-    <meta property="og:image" content="https://botfaqtor.ru/google-clickfraud/images/og_imageNet.gif" />
-	<!-- End Site info -->
+    <meta property="og:image" content="ogg-preview.png" />
+	<!-- build:css -->
+	<link rel="stylesheet" href="css/app.min.css">
+	<!-- endbuild -->
 </head>
 <body class="landing-yandex-ad">
 	<!-- Google Tag Manager (noscript) -->
@@ -88,10 +96,10 @@
 					</div>
 					<div class="slider">
 						<div class="before">
-							<img src="images/dist/main/main-slider-1.jpg">
+							<img src="images/dist/main/main-slider-1.webp">
 						</div>
 						<div class="after">
-							<img src="images/dist/main/main-slider-2.jpg">
+							<img src="images/dist/main/main-slider-2.webp">
 						</div>
 						<div class="change">
 							<div class="change__user">
@@ -171,12 +179,12 @@
 					<div class="point-item__img-head">
 						<img src="images/dist/point/brow-interface.svg">
 					</div>
-					<img src="images/gif/botfaqtor-captcha-min.gif">
+					<video autoplay="autoplay" muted loop src="images/gif-comp/botfaqtor-captcha_compressed.mp4">
 				</div>
 			</div>
 			<div class="point-item point-item_reverse">
 				<div class="point-item__img">
-					<img src="images/dist/point/point-img2.png">
+					<img data-src="images/dist/point/point-img2.webp" class="lazyload">
 				</div>
 				<div class="point-item__content">
 					<h3><span>Защита</span> от сервисов разгадывания капчи</h3>
@@ -196,7 +204,7 @@
 					</a>
 				</div>
 				<div class="point-item__img">
-					<img src="images/dist/point/point-img3.png">
+					<img src="images/dist/point/point-img3.svg">
 				</div>
 			</div>
 		</div>
@@ -272,7 +280,7 @@
 								<span>Безлимитное</span> количество доменов, <span>любой</span> объем трафика и использование <span>всех сервисов.</span>
 							</p>
 						</li>
-						<li>
+						<li style="padding-bottom: 19px">
 							<img src="images/dist/price/infinite-icon.svg">
 							<p>
 								<span>Безлимитный</span> аудит всех источников трафика.
@@ -665,6 +673,52 @@
 	<!--#include virtual="../../common/sections/contact-section/contact-section.html" -->
 	<!-- FOOTER -->
 	<!--#include virtual="../../common/sections/footer/footer.html" -->
-	<!--#include virtual="../../common/sections/footer/footer-scripts.html" -->
+	<!-- ROLL-NETWORK -->
+	<div class="roll-network">
+		<div class="block-roll">
+			<a href="#" onclick="Verbox('openSupport'); return false;" class="message-list">Задать вопрос</a>
+			<div class="ico-roll-network"></div>
+			<div class="block-roll-network">
+				<div class="item">
+					<a target="_blank" href="#" class="chat-chat-icon"
+						onclick="Verbox('openSupport'); return false;">
+						Задать вопрос
+					</a></div>
+				<div class="item">
+					<a target="_blank" href="tel:+79251326680" class="chat-phone-icon">
+						Позвонить
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="viber://pa?chatURI=botfaqtor-ru"
+						class="chat-viber-icon">
+						Написать в Viber
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://t.me/botfaqtor_bot"
+						class="chat-teleg-icon">
+						Написать в Telegram
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://vk.com/write-169372604" class="chat-vk-icon">
+						Написать в VK
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://www.facebook.com/messages/t/359439317992661"
+						class="chat-fb-icon">
+						Написать в Facebook
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- build:js -->
+	<script src="js/app.min.js"></script>
+	<!-- endbuild -->
+	<script async src="../../common/plugins/lazysizes/lazysizes.min.js"></script>
+	<script async src="../../common/plugins/lazysizes/ls.bgset.min.js"></script>
 </body>
 </html>

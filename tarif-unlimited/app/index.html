@@ -2,8 +2,14 @@
 <html lang="ru">
 
 <head>
-	<!--#include virtual="../../common/sections/header/head-scripts.html" -->
-	<!-- Site info -->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MPMC72V');
+	</script>
+	<!-- End Google Tag Manager -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Защита от ботов и скликивания с безлимитным тарифом - Botfaqtor | Ботфактор</title>
@@ -14,7 +20,11 @@
     <meta property="og:title" content="Комплексная система кибербезопасности Ботфактор. Защита от ботов и скликивания с безлимитным тарифом" />
     <meta property="og:description" content="Безлимитное количество доменов, любой объем трафика и использование всех сервисов." />
     <meta property="og:image" content="ogg-preview.jpg" />
-	<!-- End Site info -->
+	<!-- build:css -->
+	<link rel="stylesheet" href="css/app.min.css">
+	<!-- endbuild -->
+	<!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body class="landing-yandex-ad">
 	<!-- Google Tag Manager (noscript) -->
@@ -24,6 +34,7 @@
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<!-- HEADER -->
+	<!--#set var="currentServiceMenu" value="Все сервисы защиты от ботов" -->
 	<!--#include virtual="../../common/sections/header/header.html" -->
 	<!-- main -->
 	<section class="main">
@@ -556,7 +567,53 @@
 	<!--#include virtual="../../common/sections/contact-section/contact-section.html" -->
 	<!-- FOOTER -->
 	<!--#include virtual="../../common/sections/footer/footer.html" -->
-	<!--#include virtual="../../common/sections/footer/footer-scripts.html" -->
+	<!-- ROLL-NETWORK -->
+	<div class="roll-network">
+		<div class="block-roll">
+			<a href="#" onclick="Verbox('openSupport'); return false;" class="message-list">Задать вопрос</a>
+			<div class="ico-roll-network"></div>
+			<div class="block-roll-network">
+				<div class="item">
+					<a target="_blank" href="#" class="chat-chat-icon"
+						onclick="Verbox('openSupport'); return false;">
+						Задать вопрос
+					</a></div>
+				<div class="item">
+					<a target="_blank" href="tel:+79251326680" class="chat-phone-icon">
+						Позвонить
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="viber://pa?chatURI=botfaqtor-ru"
+						class="chat-viber-icon">
+						Написать в Viber
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://t.me/botfaqtor_bot"
+						class="chat-teleg-icon">
+						Написать в Telegram
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://vk.com/write-169372604" class="chat-vk-icon">
+						Написать в VK
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="https://www.facebook.com/messages/t/359439317992661"
+						class="chat-fb-icon">
+						Написать в Facebook
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- build:js -->
+	<script src="js/app.min.js"></script>
+	<!-- endbuild -->
+	<script async src="../../common/plugins/lazysizes/lazysizes.min.js"></script>
+	<script async src="../../common/plugins/lazysizes/ls.bgset.min.js"></script>
 	<script>
 		wow = new WOW();
 		wow.init();

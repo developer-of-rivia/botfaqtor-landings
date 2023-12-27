@@ -72,6 +72,33 @@
 .sites__title span{
     color: #999 !important;
 }
+.sites__table{
+    position: relative;
+}
+.sites__table tr th:nth-child(2){
+    width: 400px !important;
+}
+.sites__table .text-labl{
+    word-break: break-all;
+}
+.sites__table_1{
+    padding-right: 24px;
+}
+.sites__table_2 thead{
+    opacity: 0;
+}
+.sites__table_2 tbody{
+    top: -42px;
+    position: relative;
+}
+@media screen and (max-width: 991px){
+    .sites__table tr th:nth-child(2){
+        width: 350px !important;
+    }
+    .sites__table_1{
+        padding-right: 0;
+    }
+}
 @media screen and (max-width: 767px){
     .sites{
         display: none;
