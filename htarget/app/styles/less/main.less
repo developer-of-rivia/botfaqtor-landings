@@ -286,6 +286,12 @@
 	.main__content{
 		max-width: 100%;
 	}
+	.main{
+		padding-bottom: 130px;
+	}
+	.main__face{
+		gap: 15px;
+	}
 }
 @media screen and (max-width: 574px){
 	.main__list{
@@ -319,6 +325,9 @@
 	}
 	.main__right iframe{
 		border-radius: 0;
+	}
+	.main__right{
+		height: 360px;
 	}
 }
 @media screen and (max-width: 480px){
@@ -613,6 +622,16 @@
 }
 .howcon__towork-text a{
 	color: #007BFF;
+}
+.howcon__towork-text p:first-child:before{
+	content: '1.';
+	display: inline-block;
+	margin-right: 3px;
+}
+.howcon__towork-text p:nth-child(2):before{
+	content: '2.';
+	display: inline-block;
+	margin-right: 3px;
 }
 .howcon__box{
 	display: flex;
