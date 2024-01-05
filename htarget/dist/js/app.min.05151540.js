@@ -121,7 +121,35 @@ class GraphTabs {
     this.options.isChanged(this);
   }
 };
+function getCookie(name) {
+    let cookie_arr = document.cookie.split('; ');
+    let cookie_obj = {};
 
+    for (let i=0; i<cookie_arr.length; i++) {
+        let nv = cookie_arr[i].split('=');
+        cookie_obj[nv[0]] = nv[1]; 
+    }
+
+    return cookie_obj[name];
+}        
+
+let overlay_div = document.getElementById('tg-alert');
+
+if ( getCookie('hide_popup') == 'yes' ) {
+    overlay_div.style.display='none';
+}
+
+// При нажатии на кнопку ставим cookie, которая будет запрещать показ
+// модального окна
+document.getElementById('hide_popup')
+.addEventListener('click', function() { 
+    // Ставим cookie на минуту.                
+    var date = new Date(new Date().getTime() + 60 * 1000 * 43200);
+    document.cookie = "hide_popup=yes; path=/; expires=" + date.toUTCString();
+
+    // и сразу же скрываем окно
+    overlay_div.style.display='none';
+});;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -215,61 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		  console.log(tabs);
 		}
 	});
-
-
-
-	let youtubeVideo = document.querySelector('.yt-lazy');
-let youtubeLink = youtubeVideo.getAttribute('data-src');
-
-
-console.log(youtubeLink);
-
-
-
-youtubeVideo.addEventListener('click', function(){
-
-});
-
-;
-
-
-	// graphmodal
-	// let $modalScroll = document.querySelector('.graph-modal');
-	// const modal = new GraphModal({
-	// 	isOpen: (modal) => {
-	// 		scrollLock.disablePageScroll($modalScroll);
-	// 	},
-	// 	isClose: () => {
-	// 		scrollLock.enablePageScroll($modalScroll);
-	// 	}
-	// });
-
-	// $('.vacancy__button').on('click', function(){
-	// 	$('.tyformail-modal').removeClass('graph-modal-open fadeInUp animate-open');
-	// })
-
-	// vlist
-	// let vlistContent = document.querySelectorAll('.vlist__content');
-
-	// vlistContent.forEach(vlistContent => {
-
-	// 	let vlistText = vlistContent.querySelector('.vlist__text');
-	// 	let vlistShowmore = vlistContent.querySelector('.vlist__showmore');
-	// 	let vlistSalary = vlistContent.querySelector('.vlist__salary');
-
-	// 	vlistShowmore.addEventListener('click', function() {
-	// 		vlistText.classList.toggle('vlist__text_expand');
-	// 		vlistSalary.classList.toggle('vlist__salary_open');
-
-	// 		if(vlistShowmore.innerText == 'Показать описание полностью'){
-	// 			vlistShowmore.innerText = 'Скрыть описание';
-	// 		}
-	// 		else if(vlistShowmore.innerText == 'Скрыть описание'){
-	// 			vlistShowmore.innerText = 'Показать описание полностью';
-	// 		}
-	// 	});
-	// });
-
 })
 
 
@@ -299,6 +272,7 @@ $( document ).ready(function() {
 		});
 	});
 });
+
 
 
 

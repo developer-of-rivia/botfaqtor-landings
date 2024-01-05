@@ -1,6 +1,6 @@
 // LIBS
 @import 'common/plugins/graph-tabs/script.js';
-
+@import 'common/sections/popup/main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	// menu

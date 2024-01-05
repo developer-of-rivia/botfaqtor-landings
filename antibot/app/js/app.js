@@ -1,7 +1,7 @@
 // LIBS
 @import 'common/plugins/graph-tabs/script.js';
 @import 'common/sections/calc-section/calc-section2.js';
-
+@import 'common/sections/popup/main.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		  console.log(tabs);
 		}
 	});
-
 
 	@import 'common/sections/roll-network/roll-network.js';
 })

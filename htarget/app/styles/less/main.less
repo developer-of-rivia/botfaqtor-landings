@@ -37,6 +37,8 @@
 @import "common/sections/qa-section/qa-section.less";
 // sites-section
 @import "common/sections/sites-section/sites-section.less";
+// popup
+@import "common/sections/popup/main.less";
 
 /* PLUGINS */
 @import 'common/external-scripts/roll-network/roll-network.less';
@@ -371,6 +373,29 @@
 .possible__side-title span{
 	font-size: 20px;
 }
+.possible__side-title-icon{
+	position: relative;
+}
+.possible__side_problem .possible__side-title-icon:after{
+	content: "";
+	box-shadow: 0 0 31px 10px #d43636;
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+	left: 23px;
+	top: 23px;
+}
+.possible__side_solution .possible__side-title-icon:after{
+    content: "";
+	box-shadow: 0 0 31px 10px rgba(32,190,138,.5);
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+	left: 23px;
+	top: 23px;
+}
 .possible__item-count{
 	display: inline-flex;
 	min-width: 24px;
@@ -622,6 +647,10 @@
 }
 .howcon__towork-text a{
 	color: #007BFF;
+	text-decoration: underline;
+}
+.howcon__towork-text a:hover{
+	text-decoration: none;
 }
 .howcon__towork-text p:first-child:before{
 	content: '1.';
@@ -820,8 +849,11 @@
 
 /* переопределения */
 .nav__service-current-icon{
-	background-image: url(../images/dist/header/nav-botfaqtor.svg);
+	background-image: url(../images/dist/header/nav-hard-target.svg);
 	background-size: auto;
+}
+.nav__dropdown-item_ht{
+	background: #ddd;
 }
 .why .checked__socials-item,
 .main .checked__socials-item{
@@ -860,6 +892,9 @@
 }
 .price-sub__month span{
 	color: #24B5F4;
+}
+.price-basic__bottom{
+	border: none;
 }
 .price-sub{
 	border-color: #24B5F4;

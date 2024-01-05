@@ -1,3 +1,6 @@
+@import 'common/sections/popup/main.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	// menu
 	let burgerIcon = document.querySelector('.header__toggle-burger');
