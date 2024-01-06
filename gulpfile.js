@@ -37,18 +37,6 @@ import fs			 from 'fs'
 
 
 
-// function browsersync() {
-// 	browserSync.init({
-// 		server: {
-// 			baseDir: `${folderName}/app/`,
-// 			middleware: bssi({ baseDir: `${folderName}/app/`, ext: '.html' }),
-// 		},
-// 		ghostMode: { clicks: false },
-// 		notify: false,
-// 		online: true,
-// 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
-// 	})
-// }
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -58,51 +46,8 @@ function browsersync() {
 		ghostMode: { clicks: false },
 		notify: false,
 		online: true,
-		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
-
-
-// function scripts() {
-// 	return src([`${folderName}/app/js/*.js`, `!${folderName}/app/js/*.min.js`])
-// 		.pipe(webpackStream({
-// 			mode: 'production',
-// 			performance: { hints: false },
-// 			// plugins: [
-// 			// 	new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-// 			// ],
-// 			module: {
-// 				rules: [
-// 					{
-// 						test: /\.m?js$/,
-// 						exclude: /(node_modules)/,
-// 						use: {
-// 							loader: 'babel-loader',
-// 							options: {
-// 								presets: ['@babel/preset-env'],
-// 								plugins: ['babel-plugin-root-import']
-// 							}
-// 						}
-// 					}
-// 				]
-// 			},
-// 			optimization: {
-// 				minimize: true,
-// 				minimizer: [
-// 					new TerserPlugin({
-// 						terserOptions: { format: { comments: false } },
-// 						extractComments: false
-// 					})
-// 				]
-// 			},
-// 		}, webpack)).on('error', (err) => {
-// 			this.emit('end')
-// 		})
-// 		.pipe(concat('app.min.js'))
-// 		.pipe(dest(`${folderName}/app/js`))
-// 		.pipe(browserSync.stream())
-// }
-
 
 // работа со скриптами
 function scripts() {
@@ -147,15 +92,6 @@ function criticalCssInject(){
 	.pipe(dest(`${folderName}/dist`));
 }
 
-// function criticalCssInject(){
-// 	return src(`${folderName}/dist/index.html`)
-// 	.pipe(replace(/<link rel="stylesheet" href="css\/critical.css">/, function(s) {
-// 		var style = fs.readFileSync(`${folderName}/dist/css/critical.css`, 'utf8');
-// 		return '<style>\n' + style + '\n</style>';
-// 	}))
-// 	.pipe(dest(`${folderName}/dist`));
-// }
-
 
 // работа над изображениями
 function images() {
@@ -175,7 +111,9 @@ function buildcopy() {
 		`${folderName}/app/css/critical.css`,
 		`${folderName}/app/images/**/*.*`,
 		`!${folderName}/app/images/src/**/*`,
-		`${folderName}/app/fonts/**/*`
+		`${folderName}/app/fonts/**/*`,
+		`${folderName}/app/json/**/*`,
+		`${folderName}/app/*.{jpg,png,svg}`,
 	], { base: `${folderName}/app/` })
 	.pipe(dest(`${folderName}/dist`))
 }
